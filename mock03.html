@@ -5,7 +5,6 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <base href="https://www.dataedupt.kr/">
   <title>모의고사 1</title>
-
 </head>
 <style>
 /* AUTO:exam-ui start */
@@ -15,60 +14,45 @@ a.b2.help,
 .cp1question1 .lst1 .li1 a {
   cursor: pointer;
 }
-
 /* hover (navy) */
 .cp1question1 .lst1 .li1:hover {
   background: rgba(31, 42, 68, 0.06);
 }
-
 /* 선택 표시 (navy) */
 .cp1question1 .lst1 .li1.is-selected {
   background: rgba(31, 42, 68, 0.12);
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-selected .t1 {
   font-weight: 600;
   color: #2980b9; /* 딥 블루 */
 }
-
 /* 정답 (navy) */
 .cp1question1 .lst1 .li1.is-correct {
   background: rgba(52, 152, 219, 0.18); /* 라이트 블루 */
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-correct .t1 {
   font-weight: 700;
   color: #2980b9; /* 딥 블루 */
 }
-
 /* 오답 */
 .cp1question1 .lst1 .li1.is-wrong {
   background: rgba(160, 30, 30, 0.12);
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-wrong .t1 {
   font-weight: 600;
   color: #7a1f1f;
 }
-
 /* 보기 버튼 (navy) */
 a.b2.help {
   color: #2980b9; /* 딥 블루 */
 }
-
 a.b2.help.on {
   font-weight: 600;
 }
 /* AUTO:exam-ui end */
-
-
-(위 CSS 그대로 붙여 넣으세요)
-
-
-(위 CSS 그대로 붙여 넣으세요)
 
 
 /* AUTO:clickable-ui start */
@@ -77,32 +61,24 @@ a.b2.help,
 .cp1question1 .lst1 .li1 a {
   cursor: pointer;
 }
-
 .cp1question1 .lst1 .li1:hover {
   background: rgba(0, 0, 0, 0.04);
 }
-
 a.b2.help:hover {
   opacity: 0.85;
 }
 /* AUTO:clickable-ui end */
-
-
 /* AUTO:mobile-scroll-fix start */
 html {
   scroll-behavior: smooth;
 }
-
 .container {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 /* AUTO:mobile-scroll-fix end */
-
-
 body {width:100%;}
-		
 	.eg1 {padding:10px 0px; text-align:center;width:100%;}
 	.tg2 {border-bottom:1px solid #ddd;padding:5% 5%; display:none}
 	.cp1question1 {padding-bottom:12px;}
@@ -111,14 +87,74 @@ body {width:100%;}
 	  height: 100%;
 	  object-fit: contain; /* 또는 cover */
 	}
+h2 a {
+  font-size: 16px;        /* 글씨 크기 */
+  text-decoration: none;  /* 밑줄 제거 */
+  color: #333;            /* 기본 글자 색 */
+  font-weight: 500;       /* 약간 두껍게 */
+  transition: color 0.3s ease; /* hover 시 부드럽게 색 변화 */
+}
+h2 a:hover {
+  color: #007acc;         /* hover 시 포인트 색 */
+}
+
+/* AUTO:cp1dlist2-style start */
+.cp1dlist2 {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+.cp1dlist2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.em2 {
+  color: #d63031;
+}
+/* AUTO:cp1dlist2-style end */
 
 </style>
 <body>
-<div class="container">
-
-
+<div class="container  clearfix">
+<h2><a href="index.html"> &lt; 돌아가기</a></h2>
+<!-- cp1dlist2 -->
+<div class="cp1dlist2">
+<ul class="dl1">
+<li class="di1">
+<a class="a1">
+<b class="dt1">총 문제</b>
+<span class="dd1">80개</span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">맞춘 문제</b>
+<span class="dd1"><b class="em1">0개</b></span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">틀린 문제</b>
+<span class="dd1"><b class="em2">0개</b></span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">안 푼 문제</b>
+<span class="dd1"><b class="em3">80개</b></span>
+</a>
+</li>
+</ul>
+</div>
+<!-- /cp1dlist2 -->
 <h3 class="hb1 h3">3회 모의고사</h3>
-
 <!-- cp1question1 -->
 <div class="cp1question1">
 	<div class="sg1">
@@ -126,9 +162,6 @@ body {width:100%;}
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1683);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -164,19 +197,11 @@ body {width:100%;}
 			기존의 작은 데이터 처리 분석으로는 얻을 수 없었던 통찰과 가치를 하둡(hadoop)을 기반으로 하는 대용량 분산처리기술을 통해 창출하는 새로운 방식이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		하둡은 빅데이터의 보완기술, 특징일 뿐 정의는 아니다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -204,8 +229,7 @@ body {width:100%;}
 			<div class="t2">
 									#빅데이터									# 데이터베이스									# 하둡									# 분산처리							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -216,9 +240,6 @@ body {width:100%;}
 			<span class="g1">1과목</span>
 			<span class="g1">데이터베이스 정의와 특징</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1684);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -254,19 +275,11 @@ body {width:100%;}
 			OLAP 시스템			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		OLTP 시스템은 단순 자동화에 치우쳐 있는 시스템이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -292,8 +305,7 @@ OLAP 시스템은 정보 위주의 분석 처리를 통해 다양한 비즈니�
 			<div class="t2">
 									#OLAP									# 데이터 분석									# 의사결정									# 다차원 데이터									# 정보 처리							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -304,9 +316,6 @@ OLAP 시스템은 정보 위주의 분석 처리를 통해 다양한 비즈니�
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1685);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -342,19 +351,11 @@ OLAP 시스템은 정보 위주의 분석 처리를 통해 다양한 비즈니�
 			데이터의 사후처리보다 사전처리에 비중을 둔다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		빅데이터가 만들어 내는 변화에는 데이터의 사전처리에서 사후처리에 비중을 많이 두게 된다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -382,8 +383,7 @@ OLAP 시스템은 정보 위주의 분석 처리를 통해 다양한 비즈니�
 			<div class="t2">
 									#빅데이터									# 사전처리									# 사후처리									# 상관관계									# 전수조사							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -394,9 +394,6 @@ OLAP 시스템은 정보 위주의 분석 처리를 통해 다양한 비즈니�
 			<span class="g1">1과목</span>
 			<span class="g1">데이터베이스 정의와 특징</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1686);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -438,19 +435,11 @@ D. Data mining - 대용량 데이터로부터 의미 있는 관계, 규칙, 패�
 			A, B, C			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		A. OLAP / B. Business Analytics / C. Business Intelligence				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -470,8 +459,7 @@ D. Data mining - 대용량 데이터로부터 의미 있는 관계, 규칙, 패�
 			<div class="t2">
 									# OLTP									# Business Intelligence									# Business Analytics									# Data mining							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -482,9 +470,6 @@ D. Data mining - 대용량 데이터로부터 의미 있는 관계, 규칙, 패�
 			<span class="g1">1과목</span>
 			<span class="g1">비즈니스 모델</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1687);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -533,19 +518,11 @@ C. 최다 구매 패턴을 보이는 상품 진열<br>
 			다 - 라 - 가			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		A,C에 해당하는 개념은 유전 알고리즘, 협업 필터링, 연관규칙 학습에 관한 내용이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -565,8 +542,7 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<div class="t2">
 									# 유전 알고리즘									# 협업 필터링									# 연관규칙 학습									# 유형분석									# 회귀분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -577,9 +553,6 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<span class="g1">1과목</span>
 			<span class="g1">비즈니스 모델</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1688);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -615,19 +588,11 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			사생활침해			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		빅데이터의 위기요인 3가지는 데이터오용, 책임원칙훼손, 사생활침해이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -653,8 +618,7 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<div class="t2">
 									#빅데이터									# 사생활 침해									# 데이터 분석									# 프라이버시							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -665,9 +629,6 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<span class="g1">1과목</span>
 			<span class="g1">전략 인사이트 도출을 위한 필요 역략</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1689);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -703,19 +664,11 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			최적의 분석 설계 및 노하우 축적이 가능한 분석 기술에 대한 숙련도 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		최적의 분석 설계 및 노하우 축적이 가능한 분석 기술에 대한 숙련도는 데이터사이언티스트가 갖추어야할 하드스킬(Hard Skill)에 해당한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -741,8 +694,7 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<div class="t2">
 									#데이터 사이언티스트									# 소프트 스킬									# 하드 스킬									# 분석 기술									# 통찰력									# 스토리텔링									# 협력							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -753,9 +705,6 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<span class="g1">1과목</span>
 			<span class="g1">비즈니스 모델</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1690);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -791,19 +740,11 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			알고리즈미스트			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		알고리즘에 대한 접근권이 제공된다고 해도 수십만 줄로 코딩된 프로그램을 보고 그 내용을 해석해 낼 수 없기 때문에 알고리즘에 부당함으로 피해 받는 사람들을 구제할 수 있는 전문가가 알고리즈미스트이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -831,8 +772,7 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<div class="t2">
 									#알고리즘									# 공정성									# 데이터 분석									# 컴퓨터 과학							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -843,9 +783,6 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			<span class="g1">1과목</span>
 			<span class="g1">데이터베이스 정의와 특징</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1691);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -881,19 +818,11 @@ C. 최다 구매 패턴을 보이는 상품 진열: 연관 규칙 학습 (가)<b
 			단순한 정보의 수집에서 탈피하고 분석이 중심이 되는 시스템 구축을 지향한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		CRM은 고객별 구매이력 데이터베이스를 분석하여 고객에 대한 이해를 돕고 이를 바탕으로 각종 마케팅 전략을 펼치는 것을 말한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -921,8 +850,7 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			<div class="t2">
 									#고객관계관리									# 데이터 분석									# 고객 만족									# 전략적 접근							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -933,9 +861,6 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			<span class="g1">1과목</span>
 			<span class="g1">데이터와 정보</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1692);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -971,19 +896,11 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			문자			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		정량적 데이터의 형태는 수치, 도형, 기호 등이며, 정성적 데이터의 형태는 언어, 문자 등이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1009,8 +926,7 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			<div class="t2">
 									#정량 데이터									# 정성 데이터									# 수치									# 도형									# 기호									# 문자							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1021,9 +937,6 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			<span class="g1">2과목</span>
 			<span class="g1">ETL(Extraction, Trans formation and Load)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1693);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1059,19 +972,11 @@ CRM의 본질은 고객 데이터를 분석하여 고객의 요구를 이해하�
 			클렌징된 데이터를 ODS 내의 단일 통합 테이블에 적재하는 단계이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		②번은 프로파일링 단계, ③번은 인터페이스 단계, ④번은 데이터 클렌징 단계에 해당한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1097,8 +1002,7 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<div class="t2">
 									#ODS									# 데이터 인티그레이션									# ETL									# 데이터 클렌징									# 데이터 프로파일링							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1109,9 +1013,6 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<span class="g1">2과목</span>
 			<span class="g1">분산 데이터 저장 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1694);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1147,19 +1048,11 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			특정 노드에 장애가 발생할 경우 빅테이블의 마스터(Master)는 장애가 발생한 노드에서 서비스되는 Tablet을 다른 노드로 재할당 시킨다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		테이블내의 모든 데이터는 Row-Key의 사전적 순서로 정렬되며, 정렬 기준은 ‘rowkey + columnkey + timestamp’이다. 동일한 Column-Key에 대해 타임스탬프(Timestamp)가 다른 여러 버전의 값이 존재할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1187,8 +1080,7 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<div class="t2">
 									#빅테이블									# row key									# 고가용성									# 데이터 정렬							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1199,9 +1091,6 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<span class="g1">2과목</span>
 			<span class="g1">클라우드 인프라 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1695);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1237,19 +1126,11 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			호스트 기반 하이퍼바이저는 하드웨어와 호스트 운영체제 사이에 위치하며, 베어메탈 하이퍼바이저는 호스트 운영체제와 게스트 운영체제 사이에 위치한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		베어메탈 하이퍼바이저는 하드웨어와 호스트 운영체제 사이에 위치하며, 호스트 기반 하이퍼바이저는 호스트 운영 체제와 게스트 운영체제 사이에 위치한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1275,8 +1156,7 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<div class="t2">
 									#하이퍼바이저									# 베어메탈									# 호스트 기반									# 가상화									# VMM							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1287,9 +1167,6 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			<span class="g1">2과목</span>
 			<span class="g1">CDC(Change Data Capture)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1696);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1325,19 +1202,11 @@ ODS(Operational Data Store)는 다양한 데이터 원천으로부터 데이터�
 			CDC는 실시간 처리 보다는 배치처리에 적합하며, 데이터 웨어하우스 및 기타 데이터 저장소 구축에 폭 넓게 활용된다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		CDC는 실시간 혹은 근접 실시간 처리에 적합한 기법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1364,8 +1233,7 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			<div class="t2">
 									#CDC									# 실시간 처리									# 데이터 통합									# 풀 방식									# Status on Rows									# 다수의 CDC 메커니즘							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1376,9 +1244,6 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			<span class="g1">2과목</span>
 			<span class="g1">분산 컴퓨팅 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1697);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1414,19 +1279,11 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			Hive는 Pig와 달리 하둡 플랫폼에서 동작하지 않는다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Hive는 Pig와 마찬가지로 하둡 플랫폼 위에서 동작한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1453,8 +1310,7 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			<div class="t2">
 									#병렬 쿼리 시스템									# 하둡									# Pig									# Hive									# Sawzall									# 데이터 처리							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1465,9 +1321,6 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			<span class="g1">2과목</span>
 			<span class="g1">EAI(Enterprise Application Intergration)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1698);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1503,19 +1356,11 @@ CDC(Change Data Capture)는 데이터베이스 내 데이터 변경을 식별하
 			ERP, CRM, SCM 등 각종 시스템을 통합하여 마치 하나의 애플리케이션인 것처럼 사용할 수 있게 도와준다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		EAI는 미들웨어를 이용하여 비즈니스 로직을 중심으로 애플리케이션을 통합·연계하는 것이 핵심이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1541,8 +1386,7 @@ EAI는 기업 내 다양한 애플리케이션을 통합하여 하나의 시스�
 			<div class="t2">
 									#EAI									# 실시간 처리									# Hub and Spoke									# 애플리케이션 통합							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1553,9 +1397,6 @@ EAI는 기업 내 다양한 애플리케이션을 통합하여 하나의 시스�
 			<span class="g1">2과목</span>
 			<span class="g1">분산 데이터 저장 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1699);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1591,19 +1432,11 @@ EAI는 기업 내 다양한 애플리케이션을 통합하여 하나의 시스�
 			클라이언트는 네임노드에 블록 위치를 질의하고, 네임노드는 클라이언트에게 블록의 목록과 위치를 반환한다. 그 후 클라이언트는 데이터노드로부터 직접 데이터를 읽어 들인다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		클라이언트는 네임노드에 블록 위치를 질의하고, 네임노드는 클라이언트에게 블록의 목록과 위치를 반환한다. 그 후 클라이언트는 데이터노드로부터 직접 데이터를 읽어 들인다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1630,8 +1463,7 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<div class="t2">
 									#HDFS									# 네임노드									# 데이터노드									# 파일 읽기									# 블록 위치							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1642,9 +1474,6 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<span class="g1">2과목</span>
 			<span class="g1">대용량의 비정형 데이터 처리방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1700);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1680,19 +1509,11 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			스쿱은 데이터의 가져오기와 내보내기를 맵리듀스를 통해 처리하여 장애 허용 능력은 제공 하지 않는다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		스쿱은 데이터의 이동을 맵리듀스를 통해 처리하여 장애 허용 능력과 병렬 처리 기능을 제공한다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1719,8 +1540,7 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<div class="t2">
 									#스쿱									# Sqoop									# 맵리듀스									# 장애 허용 능력									# 데이터 전송									# HDFS									# RDBMS									# HBase							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1731,9 +1551,6 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<span class="g1">2과목</span>
 			<span class="g1">대용량의 비정형 데이터 처리방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1701);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1769,19 +1586,11 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			비정형 데이터의 예로는 로그 데이터, 오디오, 센서 데이터, 스프레드 시트 등이 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		스프레드 시트는 비정형 데이터에 해당하지 않는다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1808,8 +1617,7 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<div class="t2">
 									#비정형 데이터									# 하둡									# HDFS									# 맵리듀스									# 하이브									# 배치 처리									# 데이터 유실 방지							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1820,9 +1628,6 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			<span class="g1">2과목</span>
 			<span class="g1">분산 컴퓨팅 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1702);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1858,19 +1663,11 @@ HDFS(Hadoop Distributed File System)는 대용량 데이터를 효율적으로 �
 			JobTracker는 작업을 다수의 Task로 쪼갠 후 내부적으로 스케줄링해 큐(Queue)에 저장하지만, 그 Task들에 대한 데이터 지역성에는 관여하지 않는다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		JobTracker는 작업을 다수의 Task로 쪼갠 후 그 Task들을 어떤 TaskTracker에게 보내면 데이터 지역성을 보장할지도 감안해 내부적으로 스케줄링해 큐(Queue)에 저장한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1897,8 +1694,7 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<div class="t2">
 									#Hadoop									# MapReduce									# JobTracker									# TaskTracker									# 데이터 지역성									# 분산 컴퓨팅							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1909,9 +1705,6 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<span class="g1">3과목</span>
 			<span class="g1">분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1703);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1947,19 +1740,11 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			각 단계는 기준선이 없어 버전 관리 등을 통한 통제만으로 이루어진다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		각 단계는 기준선으로 설정되어 관리되어야 하며 버전관리 등을 통해 통제가 이루어진다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1987,8 +1772,7 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<div class="t2">
 									#빅데이터 분석									# 계층적 프로세스									# 기준선									# 태스크									# 스텝							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1999,9 +1783,6 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<span class="g1">3과목</span>
 			<span class="g1">분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1704);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2037,19 +1818,11 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			데이터의 기초 통계량(평균, 분석, 표준편차, 최대값, 최소값 등)을 산출한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		모델링 과정에서는 데이터를 분할하고 모델링을 수행하고 모델 적용 및 운영방안을 작성하고 수립한다. 데이터의 기초통계량을 산출하는 것은 탐색적 분석 단계에서 수행된다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2075,8 +1848,7 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<div class="t2">
 									#모델링									# 데이터 분할									# 훈련용 데이터									# 테스트 데이터									# 기초 통계량									# 탐색적 분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2087,9 +1859,6 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1705);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2125,19 +1894,11 @@ Hadoop MapReduce는 대량의 데이터를 처리하기 위한 분산 컴퓨팅 
 			공공영역(Public)			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		STEEP은 Social(사회영역), Technological(기술영역), Economic(경제영역), Environment(환경영역), Political(정치영역)으로 구성된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2165,8 +1926,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#STEEP									# 사회적 요인									# 기술적 요인									# 경제적 요인									# 정치적 요인							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2177,9 +1937,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1706);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2215,19 +1972,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			분석가의 한계			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		빅데이터 분석환경에서 프로토타이핑의 필요성은 문제에 대한 인식수준, 필요 데이터 존재 여부의 불확실성, 데이터 사용 목적의 가변성에 따라 존재한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2255,8 +2004,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#프로토타이핑									# 불확실성									# 데이터 가용성									# 분석 목적							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2267,9 +2015,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 프로젝트 관리 방안</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1707);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2305,19 +2050,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			분석가는 영역별로 조율하는 조정자이며 프로젝트의 관리자이기도하다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석가는 데이터 원천을 다루는 데이터 영역과 결과를 활용할 비즈니스 영역의 중간에서 분석 모델을 통한 조율을 수행하는 조정자이며 해당 프로젝트의 관리까지 겸임하게 되는 경우가 대부분이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2343,8 +2080,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#분석 프로젝트									# 조정자 역할									# 프로젝트 관리									# 데이터 영역									# 비즈니스 영역							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2355,9 +2091,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 거버넌스 체계 수립</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1708);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2393,19 +2126,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			확산 단계			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 성숙도는 비즈니스 부문, 조직·역량 부분, IT부문 등 3개 부문 등 3개 부문을 대상으로 성숙도 수준에 따라 도입단계, 활용단계, 확산단계, 최적화 단계로 구분해 살펴 볼 수 있다. 도입단계는 분석에 필요한 환경과 시스템을 갖추기 시작하는 단계로 일부 부서 중심으로 실적 분석 및 통계업무 위주의 분석이 수행된다. 활용단계는 분석 결과를 실제 업무에 적용하는 단계로 분석을 전문 담당부서에서 수행하며 미래 결과예측 및 시뮬레이션 분석을 수행하는 단계이다. 확산단계는 빅데이터 관리를 위한 환경이 갖추어 지고, 전사 모든 부서에서 분석을 수행하되, 전사차원에서 분석을 관리하고 공유하며, 이를 위한 분석 전문 조직을 운영하는 수준의 단계이다. 최적화 단계는 전사내 분석 협업 환경이 갖추어 지고, 실시간 분석이 가능하여 분석을 업무 프로세스에 내재화  하는 등 분석을 진화시켜 혁신 및 성과 향상에 기여하는 단계이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2431,8 +2156,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#분석 성숙도									# 도입 단계									# 활용 단계									# 확산 단계									# 최적화 단계									# 빅데이터 관리									# 전사 차원									# 분석 전문 조직							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2443,9 +2167,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 거버넌스 체계 수립</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1709);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2481,19 +2202,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			분석 프로젝트의 일정계획 수립시 데이터 수집에 대한 철저한 통제와 관리가 필요하다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 프로젝트 관리에서 일정계획 수립시 데이터 수집에 대한 철저한 통제와 관리보다 분석 범위가 빈번하게 변경되므로 시간이 소요될 수도 있다. 따라서 Time Boxing 기법과 같은 방법으로 일정관리를 진행하는 것이 필요하다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2521,8 +2234,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#프로젝트 관리									# SPICE									# ISO 21500									# 데이터 수집							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2533,9 +2245,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 프로젝트 관리 방안</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1710);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2571,19 +2280,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			분석 조직에게 다양한 분석 기법에 대한 심도있는 교육을 할 수 있는 교육담당 인력			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 조직을 갖추기 위해 반드시 필요한 인력은 비즈니스 인력, IT기술 인력, 분석전문 인력이다. 그 외에 변화관리 인력과 교육담당 인력은 겸직이 가능한 인력들이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2609,8 +2310,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#분석 조직									# 비즈니스 인력									# IT 기술 인력									# 분석 전문 인력									# 교육담당 인력							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2621,9 +2321,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 거버넌스 체계 수립</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1711);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2659,19 +2356,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			탐색적 문제 발견			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		하향식 접근법의 문제탐색 단계의 도구는 비즈니스 모델 기반 문제 탐색, 외부 참조 모델 기반 문제탐색, 분석 유즈 케이스 등이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2698,8 +2387,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#하향식 접근법									# 문제 탐색									# 비즈니스 모델									# 외부 참조 모델									# 탐색적 문제 발견							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2710,9 +2398,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1712);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2748,19 +2433,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			Problem Definition			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		과제 중심적인 접근 방식의 특징은 Speed &amp;Test, Quick &amp; Win, Problem Solving이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2786,8 +2463,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#과제 중심									# 마스터 플랜									# 문제 해결									# 문제 정의									# 빠른 실행							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2798,9 +2474,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">3과목</span>
 			<span class="g1">분석 기획 방향성 도출</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1713);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2836,19 +2509,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			구간척도 - 측정 대상이 갖고 있는 속성의 질을 측정하는 것이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		구간척도는 측정 대상이 갖고 있는 속성의 양을 측정하는 데이터 형태이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2876,8 +2541,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#명목척도									# 순서척도									# 구간척도									# 비율척도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2888,9 +2552,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1714);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2926,19 +2587,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			중위수(median) - 데이터를 입력순서에 따라 나열하여 가장 중앙에 위치하는 값 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		기술통계의 산포를 나타내는 도구를 묻는 문제로 데이터를 크기순서에 따라 나열하여 가장 중앙에 위치하는 값이 중앙값이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2964,8 +2617,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#기술 통계									# 산포									# 평균									# 중위수									# 사분위수									# 백분위수							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2976,9 +2628,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">R 기초</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1715);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3014,19 +2663,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			paste(A, c("d", "e")) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		paste("붙일 내용","붙일 내용", sep="") paste 함수 안에는 붙일 내용 2개와 옵션을 줄 수 있다. 여기에 붙일 내용 3가지 이상 들어가면 오류가 나타나게 된다. ①, ③번은 붙일 내용이 3개 이상임으로 오류가 나오고 ④번은 문법에 맞지 않는 문장이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3046,8 +2687,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# R 프로그래밍									# 벡터									# paste 함수									# c 함수									# 문자열 결합									# R 출력 결과							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3058,9 +2698,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1716);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3099,19 +2736,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			t-분포			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		해당 문제는 독립표본 t-검정으로 문제를 해결할 수 있다. 그러므로 t분포를 활용한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3126,8 +2755,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 두 집단 평균 비교									# 분산 비교									# F-분포									# 분산분석									# ANOVA									#  t-분포									# z-분포									# 포아송분포							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3138,9 +2766,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">R 기초</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1717);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3179,8 +2804,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			mean(x)*min(x)*range(x)[1]			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		각 코드를 실행한 결과는 아래와 같다.<br>
@@ -3192,14 +2815,8 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 [1] 15<br>
 &gt; mean(x)*min(x)*range(x)[1] <br>
 [1] 3				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3221,8 +2838,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# R 코드									# 벡터									# 합									# 곱									# 평균									# 길이									# 최소값									# 범위									# R 출력결과							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3233,9 +2849,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1718);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3271,19 +2884,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			상관계수가 0일 때는 데이터 간의 상관관계를 정의할 수 없다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		상관계수가 0인 경우 데이터 간의 관계가 없다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3309,8 +2914,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#상관분석									# 상관계수									# 선형관계									# 비선형관계									# 통계적 방법							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3321,9 +2925,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1719);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3359,19 +2960,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			일치성			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		선형회귀분석의 가정에는 선형성, 등분산성, 독립성, 비상관성, 정상성(정규성)이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3397,8 +2990,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#선형회귀분석									# 선형성									# 정규성									# 등분산성									# 독립성									# 가정							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3409,9 +3001,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1720);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3450,19 +3039,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			x4의 T값과 p값이 유의수준 5%하에서 유의하지 않고 회귀모형이 통계적으로 유의하므로 최종 회귀모형은 Y=71.6483+1.4519x1+0.4161x2으로 결정된다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		x4의 T값과 p값이 유의수준 5% 하에서 유의하지 않으므로 x4를 제외하고 다시 한 번 더 회귀분석을 실시해서 모든 독립변수가 유의수준 5% 하에서 유의하고 회귀모형의 F값과 p값이 유의할 경우 회귀식을 결정하고 회귀분석을 종료할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3471,8 +3052,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 회귀식									# F통계량									# p값									# 수정된 결정계수									# T값									# 유의수준									# 회귀모형									# R프로그램 결과해석									# 다중회귀분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3483,9 +3063,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">시계열분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1721);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3521,19 +3098,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			자기회귀누적이동평균모형(ARIMA)은 정상시계열모형으로 차분이나 변환을 통해 AR모형이나 MA모형으로, 둘을 합친 ARMA모형으로 비정상화 할 수 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		자기회귀누적이동평균모형(ARIMA)은 비정상시계열모형으로 차분이나 변환을 통해 AR모형이나 MA모형으로, 둘을 합친 ARMA모형으로 정상화 할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3559,8 +3128,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#시계열 분석									# 자기회귀모형									# 이동평균모형									# ARIMA 모형									# 정상 시계열							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3571,9 +3139,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1722);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3609,19 +3174,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			데이터 가공			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터 가공은 모델링 목적에 따라 목적 변수를 정의하고 필요한 데이터를 데이터마이닝 소프트웨어에 적용할 수 있도록 적합한 형식으로 가공한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3647,8 +3204,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#데이터 마이닝									# 데이터 가공									# 목적 변수									# 데이터 변환									# 모델링							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3659,9 +3215,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">데이터변경 및 요약</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1723);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3697,19 +3250,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			plyr			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		plyr 함수는 apply 함수에 기반해 데이터와 출력변수를 동시에 배열로 치환하여 처리한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3735,8 +3280,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#plyr									# split-apply-combine									# 데이터 처리									# R 패키지									# apply 함수							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3747,9 +3291,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">데이터변경 및 요약</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1724);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3785,19 +3326,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			결측치가 포함된 레코드는 모델링에서 다른 변수와의 영향도를 분석시 예상치 못한 결과를 생산하므로 무조건 삭제하고 전처리한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		결측치가 포함된 레코드라고 무조건 삭제하는 것은 바람직하지 못하며 삭제하였을 경우, 분석 가능한 데이터를 확보할 수 있는 여부를 판단하는 것이 선행되어야 한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3823,8 +3356,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#결측치 처리									# 데이터 품질									# 데이터 손실									# 대체 방법									# 예측 모델							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3835,9 +3367,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">주성분 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1725);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3876,19 +3405,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			86.8%			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		주성분 분석을 통한 설명력은 누적비율(Cumulative Proportion)을 활용하면 된다. 제 2주성분까지의 설명력은 Comp.2의 누적비율인 0.8675이고 제 2주성분까지 변수로 선택할 경우 전체 데이터의 86.8%를 설명하게 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3897,8 +3418,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 주성분 분석									# 누적 설명력									# 제 1주성분									# 제 2주성분									# R 프로그램 결과해석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3909,9 +3429,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1726);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3947,19 +3464,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			연관성 분석(Association Analysis)			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터마이닝 분석 기법 중 의사결정나무의 활용의 예는 세분화, 분류, 예측, 차원축소 및 변수선택, 교호작용효과의 파악, 범주의 병합 또는 연속형 변수의 이산화 등이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3986,8 +3495,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#의사결정나무									# 분류									# 예측									# 세분화									# 연관성 분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3998,9 +3506,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1727);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4039,19 +3544,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			12/25			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		지니 지수를 구한 결과는 (1-{left({2over 5}right)}^{2}-{left({3over 5}right)}^{2}={12 over 25})이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4069,8 +3566,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 지니 지수									# 소득 분포									# 불평등도									# 완전 평등									# 완전 불평등							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4081,9 +3577,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1728);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4119,19 +3612,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			중간연결법			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		군집을 생성할 때 거리를 정의하는 방법은 최단연결법, 최장연결법, 평균연결법, 와드연결법이 있다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4158,8 +3643,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#계층적 군집분석									# 최단연결법									# 최장연결법									# 와드연결법									# 중간연결법							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4170,9 +3654,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1729);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4208,19 +3689,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			지지도(Support)			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		간단히 말하면 A→B인 경우, 전체 TRANSACTION(POS 데이터에서는 영수증번호로, 카드사에서는 카드 전표 1장으로 생각하면 된다. POS 데이터에는 여러 아이템이 하나의 POS 트랜잭션에 연결돼 있음)에서 A만 사거나 B만 사거나 A와 B를 같이 구매한 경우, ABC를 같이 구매한 경우 등 트랜잭션에서 A또는 B가 들어간 트랜잭션 개수의 비율이다. 즉, 얼마나 빈번하게 나타나는 경우인지를 설명하는 상대적인 값이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4248,8 +3721,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#지지도									# 신뢰도									# 향상도									# 정확도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4260,9 +3732,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1730);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4298,19 +3767,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			비정상 잡음 데이터에 대해서는 민감함이 있어 따로 분류하기 힘들다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		의사결정나무는 변수에 이상치가 포함되어 있는 비정상 잡음 데이터에 대해서도 민감하지 않게 분류할 수 있다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4325,8 +3786,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 의사결정나무									# 의사결정나무의 특징							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4337,9 +3797,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1731);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4375,19 +3832,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			상관관계가 낮아지도록 변수 값을 조정한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석에 있어서 상관관계 값이 크다고 해서 변수 값을 조정하면 안된다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4408,8 +3857,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									# 다중공선성									# 회귀모형									# 변수 제거									# 평균 중심 변화									# VIF									# 상관관계 조정							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4420,9 +3868,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1732);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4461,19 +3906,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			계층적 군집분석의 결과이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		주어진 결과는 k-means 군집분석의 결과로, 이는 비계층적 군집분석 방법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4500,8 +3937,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#군집분석									# 계층적 군집분석									# 비계층적 군집분석									# K-means									# 군집 중심							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4512,9 +3948,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1733);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4553,19 +3986,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			0.4			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		재현율을 구하면 ({TP over TP+FN}={40 over 40+60}=0.4)이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4592,8 +4017,7 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<div class="t2">
 									#재현율									# 민감도									# 오분류표									# TP									# FN							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4604,9 +4028,6 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1734);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4642,19 +4063,11 @@ STEEP 분석의 전통적인 구성 요소는 사회, 기술, 경제, 환경, �
 			한번 군집이 형성되면 군집 내 객체들은 다른 군집으로 이동 할 수 없다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		k-means 군집은 초기 중심값의 선정에 따라 결과가 달라질 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4680,8 +4093,7 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			<div class="t2">
 									#k-means									# 군집 분석									# 이상값									# 최적화									# 볼록 형태									# 군집 재할당							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4692,9 +4104,6 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1735);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4730,19 +4139,11 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			A가 주어지지 않았을 때의 품목 B의 확률에 비해 A가 주어졌을 때의 품목 B의 확률의 증가 비율			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		연관분석의 향상도(Lift)는 “A가 주어지지 않았을 때의 품목 B의 확률에 비해 A가 주어졌을 때의 품목 B의 확률의 증가비율”을 의미한다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4769,8 +4170,7 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			<div class="t2">
 									#향상도									# 연관성분석									# 신뢰도									# 지지도									# 확률							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4781,9 +4181,6 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1736);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4822,19 +4219,11 @@ k-means 군집 분석은 비계층적 군집 분석의 대표적인 방법으로
 			de			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		계층적 군집분석에서 군집을 묶는 순서는 거리가 가장 짧은 노드들을 하나의 군집으로 선택하고 다음에 나머지 노드들을 최장거리순 혹은 최단거리순으로 묶을지 결정을 하고 묶어 나간다. 두 지점의 거리가 가장 짧은 노드는 d와 e이며 거리는 5.00이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4860,8 +4249,7 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<div class="t2">
 									#계층적 군집분석									# 거리 행렬									# 최단 거리									# 군집 형성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4872,9 +4260,6 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<span class="g1">4과목</span>
 			<span class="g1">인공신경망분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1737);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4910,19 +4295,11 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			로지스틱 회귀모형에서의 회귀 계수와 유사하게 해석된다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		일반화 가중치(generalized weight)는 각 공변량의 영향을 표현하기 때문에 회귀모델에서 I번째 회귀 변수의 유사한 해석을 가진다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4948,8 +4325,7 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<div class="t2">
 									#인공신경망									# 일반화 가중치									# 로지스틱 회귀									# 회귀 계수									# 기여도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4960,9 +4336,6 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<span class="g1">4과목</span>
 			<span class="g1">회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1738);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4998,19 +4371,11 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			수정결정계수(Adjusted Rsquare)는 평균제곱오차가 가장 작은 축소모형을 선택하는 방법으로 모형의 간명성과 설명력을 동시에 고려한 기준이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		베이즈 정보기준(BIC)은 AIC가 과적합이 되는 경향을 제어하기 위한 방법이 아니라 페널티 기간에 대한 차이로 인하여 다른 방법으로 사용되고 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5025,8 +4390,7 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<div class="t2">
 									# 변수 선택									# 수정결정계수									# Mallows Cp									# Akaike 정보통계량									# 베이즈 정보기준							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5037,9 +4401,6 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<span class="g1">4과목</span>
 			<span class="g1">회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1739);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5075,19 +4436,11 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			X와 Y는 강한 선형관계를 가진다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		X와 Y의 피어슨 상관계수는 0.3으로 약한 선형관계를 가진다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5104,8 +4457,7 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<div class="t2">
 									# 피어슨 상관계수									# 선형 관계									# 양의 상관관계									# 음의 상관관계									# 유의성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5116,9 +4468,6 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			<span class="g1">4과목</span>
 			<span class="g1">사회연결망 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1740);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5154,19 +4503,11 @@ d와 e의 거리가 5.00으로 가장 짧기 때문에, 계층적 군집분석�
 			simplify( )			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		simplify 함수는 loop나 multiple edge를 제거해서 단순하게 해준다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5193,8 +4534,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#igraph									# 네트워크 그래프									# simplify									# 루프 제거									# 다중 간선 제거							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5205,9 +4545,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">인공신경망분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1741);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5243,19 +4580,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			Softmax 함수			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Softmax 함수는 출력 값이 여러 개로 주어지고, 목표치가 다범주인 경우 각 범주에 속할 사후확률을 제공하는 함수이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5282,8 +4611,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#퍼셉트론									# 활성화 함수									# Softmax									# 다중 클래스 분류									# 사후확률							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5294,9 +4622,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">주성분 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1742);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5332,19 +4657,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			다변량 자료를 저차원의 그래프로 표시하여 이상치(Outlier) 탐색에 활용할 수 없다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		주성분 분석은 서로 상관성이 높은 변수들의 선형 결합으로 만들어 기존의  상관성이 높은 변수들을 요약, 축소하는 기법으로 이상치 탐지에도 사용한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5353,8 +4670,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									# 주성분 분석									# 전체 변이 공헌도									# 상관성									# 다중공선성									# 이상치 탐색									# 저차원 축소							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5365,9 +4681,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1743);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5406,19 +4719,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			설문 문항 learning의 경우 30개 부서의 점수가 모두 다르다고 하면, 21개의 부서가 47점 보다 높은 점수를 받았다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		설문문항 learning의 경우 30개 부서의 점수가 모두 다르다고 하면, 22개의 부서가 47점보다 높은 점수를 받았다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5437,8 +4742,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									# quantile									# 점수 분포									# 사분위수									# R프로그램 결과해석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5449,9 +4753,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1744);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5487,19 +4788,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			의사결정나무 알고리즘은 정상적인 데이터에 대해서만 민감함이 없이 분류할 수 있다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		의사결정나무는 비정상 잡음 데이터에 대해서도 민감함이 없이 분류할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5526,8 +4819,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#의사결정나무									# 데이터 분류									# 시각적 표현									# 과대적합									# 잡음 데이터							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5538,9 +4830,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">주성분 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1745);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5579,19 +4868,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			두 번째 주성분은 head2, breadth2 변수와 양의 상관관계를 가진다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		두 번째 주성분은 head2, breadth2 변수와 음의 상관관계를 가질 것이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5617,8 +4898,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#주성분 분석									# 로딩 값									# 상관관계									# 차원 축소							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5629,9 +4909,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">텍스트 마이닝</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1746);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5667,19 +4944,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			Stemming은 접속사, 대명사 등은 남겨두고, 공통 어간을 가지는 단어끼리 묶기 위한 처리 방법이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Stemming은 접속사, 대명사 등을 제거하고, 공통 어간을 가지는 단어끼리 묶기 위한 처리 방법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5706,8 +4975,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#텍스트 마이닝									# TF-IDF									# Wordcloud									# Stemming									# Opinion Mining							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5718,9 +4986,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1747);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5759,19 +5024,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			분류 모형 평가를 위해 범주형 변수에 대표적으로 사용되는 방법에 오분류표는 포함되지 않는다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분류 모형 평가를 위해 범주형 변수에 대표적으로 사용되는 방법은 오분류표, ROC 그래프, 이익 도표, 향상도 곡선 등이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5798,8 +5055,7 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<div class="t2">
 									#모델 성능 평가									# Holdout									# k-fold 교차 검증									# Bootstrap									# 오분류표							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5810,9 +5066,6 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1748);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5848,19 +5101,11 @@ igraph 패키지에서 네트워크 그래프의 루프와 다중 간선을 제�
 			K-means와 같은 분할 방법에서 발전하였으나, 데이터의 분포를 통해 군집을 정하는 방법이다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		DBSCAN은 데이터의 밀도를 통해 군집을 정하는 방법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5887,8 +5132,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#DBSCAN									# 밀도 기반 군집화									# 반경									# 최소 포인트 수									# 노이즈									# 비구형 군집							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5899,9 +5143,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">4과목</span>
 			<span class="g1">텍스트 마이닝</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1749);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5937,19 +5178,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			Corpus 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Corpus는 데이터마이닝의 절차 중 데이터의 정제, 통합, 선택, 변환의 과정을 거친 구조화된 단계로서 더 이상 추가적인 절차 없이 데이터마이닝 알고리즘실험에서 활용될 수 있는 상태이며, tm 패키지에서 문서를 관리하는 기본구조이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5975,8 +5208,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#텍스트 마이닝									# Corpus									# 데이터 정제									# 구조화된 데이터							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5987,9 +5219,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1750);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6028,19 +5257,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			향상도가 1보다 크므로 서로 양의 관계로 순대와 떡볶이의 연관성은 매우 높다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		"떡볶이 → 순대와 ""순대 → 떡볶이"" 각각 향상도는 1보다 크므로 연관성이 높음을 알 수 있다."				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6067,8 +5288,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#연관성 분석									# 지지도									# 신뢰도									# 향상도									# 장바구니 분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6079,9 +5299,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">4과목</span>
 			<span class="g1">사회연결망 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1751);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6117,19 +5334,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			2원모드 매트릭스 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		행과 열에 다른 개체가 배열되는 것은 2원모드 매트릭스이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6156,8 +5365,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#사회연결망 분석									# 2원모드 매트릭스									# 행과 열									# 개체									# 관계							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6168,9 +5376,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">4과목</span>
 			<span class="g1">사회연결망 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1752);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6206,19 +5411,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			연결정도 중심성 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		연결정도 중심성은 한 노드에 직접적으로 연결된 노드들의 합으로 얻어지며, 한 노드에 얼마나 많은 노드들이 관계를 맺고 있는지를 기준으로 그 노드가 중심에 위치하는 정도를 계량화 한 것이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6245,8 +5442,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#사회연결망 분석									# 연결정도 중심성									# 근접 중심성									# 매개 중심성									# 위세 중심성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6257,9 +5453,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">5과목</span>
 			<span class="g1">활용(3단계)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1753);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6295,19 +5488,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			다양한 시각화의 오류를 피하기 위해서는 하나의 관점에서 깊게 고려해야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		다양한 시각화의 오류와 문제점을 피하기 위해서는 최대한 여러 관점에서 신중하게 고려해야 한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6335,8 +5520,7 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<div class="t2">
 									#인사이트									# 데이터 분석									# 보텀업									# 시각화 오류							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6347,9 +5531,6 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			<span class="g1">5과목</span>
 			<span class="g1">분석 도구를 이용한 시각화 구현 : R</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1754);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6385,19 +5566,11 @@ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)은 밀도 �
 			var group=svg.append("g") / .attr(“transform”, “translate(200, 200)”) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		D3.js의 명령어이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6423,8 +5596,7 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<div class="t2">
 									#R									# 시각화									# axis									# 데이터 프레임									# ggplot2									# D3.js									# JavaScript							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6435,9 +5607,6 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 프로세스</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1755);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6473,19 +5642,11 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			인포그래픽은 중요한 정보를 여러 장의 그래픽으로 표현해 손쉽게 해당 정보를 이해할 수 있도록 하는 그래픽 메시지이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		인포그래픽은 중요한 정보를 여러 장이 아닌 한 장의 그래픽으로 표현한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6511,8 +5672,7 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<div class="t2">
 									#정보 디자인									# 데이터 시각화									# 정보 시각화									# 인포그래픽									# 빅데이터 시각화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6523,9 +5683,6 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1756);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6564,19 +5721,11 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			한 구간이 몇 개의 세부 항목으로 나뉘면서도 전체의 합이 의미가 있는 경우에 사용한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		누적 막대그래프에 대한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6591,8 +5740,7 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<div class="t2">
 									#시각화 그래프									# 분포 시각화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6603,9 +5751,6 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			<span class="g1">5과목</span>
 			<span class="g1">라이브러리 기반의 시각화 구현 : D3.js</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1757);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6641,19 +5786,11 @@ R은 데이터 분석과 시각화를 위한 강력한 도구로, 다양한 그�
 			ticks( ) : 축의 눈금 단위를 지정			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		ticks( ) - 축의 눈금 단위를 지정하는 함수이다. domain( ) - scale 입력값의 범위 지정 / range( ) - scale 출력값의 범위 지정 / extent( ) - 배열의 최솟값과 최댓값을 찾아 반환하는 함수				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6681,8 +5818,7 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			<div class="t2">
 									#D3.js									# domain									# ticks									# range									# array							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6693,9 +5829,6 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			<span class="g1">5과목</span>
 			<span class="g1">빅데이터와 시각화 디자인</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1758);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6731,19 +5864,11 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			메시지 전달 관점에서 데이터 시각화는 큰 범주에 해당하는 정보를 시각화하는 것이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		메시지 전달 관점에서 정보 시각화에 대한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6771,8 +5896,7 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			<div class="t2">
 									#빅데이터 시각화									# 메시지 전달									# 정보의 기능성									# 인포그래픽							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6783,9 +5907,6 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 구현 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1759);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6821,19 +5942,11 @@ ticks() 함수는 축의 눈금 단위를 지정하는 데 사용되므로, 보�
 			Conos Insight, PowerPivot등은 API로 코드를 작성해 시각화를 구현해야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		플랫폼에서 제공하는 기능·명령어를 실행해 시각화할 수 있다. 라이브러리가 제공하는 API로 코드를 작성해 시각화하는 것은 시각화 라이브러리에 관한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6861,8 +5974,7 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<div class="t2">
 									#시각화 플랫폼									# BI 플랫폼									# 데이터 시각화									# 지식 시각화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6873,9 +5985,6 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 구현 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1760);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6911,19 +6020,11 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			모자이크 플롯은 단수의 categorical variable 분포 파악에 도움이 된다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		모자이크 플롯은 복수의 categorical variable 분포 파악에 도움이 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6951,8 +6052,7 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<div class="t2">
 									#시각화									# ggplot2									# 히스토그램									# 모자이크 플롯							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6963,9 +6063,6 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1761);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -7001,19 +6098,11 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			배열 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		정보의 조직화 과정은 ‘데이터 수집 – 분류 – 배열 – 관계 맺기’이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -7032,8 +6121,7 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<div class="t2">
 									# 정보의 조직화									# 정보의 조직화 과정							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -7044,9 +6132,6 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 구현 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1762);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -7082,19 +6167,11 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			수많은 에지와 노드로 이루어져 복잡한 모습의 네트워크 그래프나 시각화 결과물을 만들어 내는 것으로 오픈소스 그래프 소프트웨어로 사용자가 인터렉티브하게 네트워크나 구조를 탐색할 수 있도록 해준다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		게피(Gephi)는 네트워크 형태의 데이터를 시각화할 때 유용한 시각화 도구이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -7120,35 +6197,26 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
 			<div class="t2">
 									#게피									# 네트워크 시각화									# 오픈소스									# 인터랙티브									# 노드									# 에지							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
-
 <script>/*<![CDATA[*/
 	// 20240424.
 	// $('#m-help1').show().addClass('loaded');
 /*]]>*/</script>
-
-
-
-
 </div>
 <!-- /container -->
 <script>/*<![CDATA[*/
-	$('.w1').remove();
+	//$('.w1').remove();
 	$('.w2').remove();
-	
   // 1) 인라인 style 제거 (초기 꼬임 방지)
   $('.tg2[style]').removeAttr('style');
-
   // 2) 클릭: href로 연결된 id를 정확히 토글
   $('.b2.help').on('click', function(e){
     e.preventDefault();
     var target = $(this).attr('href'); // "#m-help1a1"
     var $panel = $(target);
-
     // 첫 클릭부터 확실히 반응하도록 show/hide로 분기
     if ($panel.is(':visible')) {
       $panel.hide(); // 또는 $panel.addClass('is-hidden');
@@ -7157,47 +6225,29 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
     }
     // 애니메이션 원하면: $panel.slideToggle(150);
   });
-
 /*]]>*/
-
-
 </script>
-
 </div>
-
-(위 JS 그대로 붙여 넣으세요)
-
-
-
-
-
-
-(위 JS 그대로 붙여 넣으세요)
 
 
 <!-- AUTO:mobile-scroll-fix-js start -->
 <script>
 (function () {
-
   // ---------- utils ----------
   function getPanelFromBtn(btn) {
     const sel = btn.getAttribute('href');
     if (!sel || !sel.startsWith('#')) return null;
     return document.querySelector(sel);
   }
-
   function isOpen(panel) {
     return panel && getComputedStyle(panel).display !== 'none';
   }
-
   function setOpen(btn, panel, open) {
     if (!btn || !panel) return;
-
     if (open) {
       panel.style.display = 'block';
       btn.classList.add('on');
       btn.setAttribute('aria-expanded', 'true');
-
       setTimeout(() => {
         panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 50);
@@ -7207,12 +6257,10 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
       btn.setAttribute('aria-expanded', 'false');
     }
   }
-
   // ---------- storage ----------
   function pageKeyPrefix() {
     return 'exam:' + (location.pathname || 'page') + ':';
   }
-
   function getQuestionId(qBox) {
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     if (!btn) return null;
@@ -7220,11 +6268,9 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
     if (!href || !href.startsWith('#')) return null;
     return href.slice(1);
   }
-
   function storageKey(qId) {
     return pageKeyPrefix() + qId;
   }
-
   // 정답 번호: 해설 패널 내 i.t2n (예: 2)
   function getCorrectIndex(panel) {
     const n = panel ? panel.querySelector('i.t2n') : null;
@@ -7232,25 +6278,20 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
     const v = parseInt((n.textContent || '').trim(), 10);
     return Number.isFinite(v) ? v : null; // 1-based
   }
-
   function clearState(qBox) {
     qBox.querySelectorAll('.lst1 .li1').forEach(li => {
       li.classList.remove('is-selected', 'is-correct', 'is-wrong');
     });
   }
-
   function applyResult(qBox, idx) {
     const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
     const selected = options[idx - 1];
     if (!selected) return;
-
     selected.classList.add('is-selected');
-
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     const panel = btn ? getPanelFromBtn(btn) : null;
     const correct = getCorrectIndex(panel);
     if (!correct) return;
-
     if (idx === correct) {
       selected.classList.add('is-correct');
     } else {
@@ -7259,7 +6300,6 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
       if (right) right.classList.add('is-correct');
     }
   }
-
   function saveChoice(qBox, idx) {
     const qId = getQuestionId(qBox);
     if (!qId) return;
@@ -7267,72 +6307,148 @@ Conos Insight와 PowerPivot은 사용자가 직접 코드를 작성하지 않고
       localStorage.setItem(storageKey(qId), String(idx));
     } catch (e) {}
   }
-
   function restoreChoices() {
     document.querySelectorAll('.cp1question1').forEach(qBox => {
       const qId = getQuestionId(qBox);
       if (!qId) return;
-
       let v = null;
       try {
         v = localStorage.getItem(storageKey(qId));
       } catch (e) {}
-
       const idx = v ? parseInt(v, 10) : null;
       if (!idx || !Number.isFinite(idx)) return;
-
       clearState(qBox);
       applyResult(qBox, idx);
     });
   }
-
   // ---------- 1) 보기 버튼 토글 (충돌 방지) ----------
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('a.b2.help');
     if (!btn) return;
-
     const panel = getPanelFromBtn(btn);
     if (!panel) return;
-
     // 기존 스크립트(여러 개 존재)와 충돌 방지
     e.preventDefault();
     e.stopImmediatePropagation();
-
     setOpen(btn, panel, !isOpen(panel));
   }, true);
-
   // ---------- 2) 선지 클릭: 선택 표시 + 정답표시 + 저장 + 해설 오픈 ----------
   document.addEventListener('click', function (e) {
     const li = e.target.closest('.cp1question1 .lst1 .li1');
     if (!li) return;
-
     const qBox = li.closest('.cp1question1');
     if (!qBox) return;
-
     const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
     const idx = options.indexOf(li) + 1;
     if (!idx) return;
-
     clearState(qBox);
     applyResult(qBox, idx);
     saveChoice(qBox, idx);
-
     // 해설 자동 오픈
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     const panel = btn ? getPanelFromBtn(btn) : null;
     if (btn && panel) setOpen(btn, panel, true);
   }, true);
-
   // ---------- init ----------
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', restoreChoices);
   } else {
     restoreChoices();
   }
-
 })();
 </script>
 <!-- AUTO:mobile-scroll-fix-js end -->
+
+<!-- AUTO:score-counter start -->
+<script>
+(function () {
+  function qsa(sel, root) { return Array.from((root || document).querySelectorAll(sel)); }
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+
+  function setText(el, n) {
+    if (!el) return;
+    el.textContent = String(n) + '개';
+  }
+
+  function updateTotal(total) {
+    const block = qs('.cp1dlist2');
+    if (!block) return;
+    qsa('.cp1dlist2 .di1', block).forEach(li => {
+      const label = (qs('.dt1', li)?.textContent || '').trim();
+      if (label === '총 문제') {
+        const dd = qs('.dd1', li);
+        if (dd) dd.textContent = String(total) + '개';
+      }
+    });
+  }
+
+  function getPanelFromQ(qBox) {
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    if (!btn) return null;
+    const href = btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return null;
+    return document.querySelector(href);
+  }
+
+  function getCorrectIndex(panel) {
+    const n = panel ? panel.querySelector('i.t2n') : null;
+    if (!n) return null;
+    const v = parseInt((n.textContent || '').trim(), 10);
+    return Number.isFinite(v) ? v : null; // 1-based
+  }
+
+  function recompute() {
+    const total = qsa('.cp1question1').length;
+    let correct = 0;
+    let wrong = 0;
+
+    qsa('.cp1question1').forEach(qBox => {
+      const state = qBox.getAttribute('data-answer-state');
+      if (state === 'correct') correct += 1;
+      else if (state === 'wrong') wrong += 1;
+    });
+
+    const unanswered = Math.max(0, total - (correct + wrong));
+
+    updateTotal(total);
+    setText(qs('.cp1dlist2 .em1'), correct);
+    setText(qs('.cp1dlist2 .em2'), wrong);
+    setText(qs('.cp1dlist2 .em3'), unanswered);
+  }
+
+  function handle(e) {
+    const li = e.target.closest('.cp1question1 .lst1 .li1');
+    if (!li) return;
+
+    const qBox = li.closest('.cp1question1');
+    if (!qBox) return;
+
+    const options = qsa('.lst1 .li1', qBox);
+    const idx = options.indexOf(li) + 1; // 1-based
+    if (idx <= 0) return;
+
+    const panel = getPanelFromQ(qBox);
+    const correctIdx = getCorrectIndex(panel);
+    if (!correctIdx) {
+      qBox.removeAttribute('data-answer-state');
+      recompute();
+      return;
+    }
+
+    qBox.setAttribute('data-answer-state', (idx === correctIdx) ? 'correct' : 'wrong');
+    recompute();
+  }
+
+  // click이 막혀도 동작하도록 pointerup도 함께 수신(충돌 방어)
+  document.addEventListener('click', handle, true);
+  document.addEventListener('pointerup', handle, true);
+
+  function init() { recompute(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+<!-- AUTO:score-counter end -->
 
 </body>
 </html>

@@ -6,7 +6,6 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <base href="https://www.dataedupt.kr/">
   <title>모의고사 2</title>
-
 </head>
 <style>
 /* AUTO:exam-ui start */
@@ -16,60 +15,45 @@ a.b2.help,
 .cp1question1 .lst1 .li1 a {
   cursor: pointer;
 }
-
 /* hover (navy) */
 .cp1question1 .lst1 .li1:hover {
   background: rgba(31, 42, 68, 0.06);
 }
-
 /* 선택 표시 (navy) */
 .cp1question1 .lst1 .li1.is-selected {
   background: rgba(31, 42, 68, 0.12);
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-selected .t1 {
   font-weight: 600;
   color: #2980b9; /* 딥 블루 */
 }
-
 /* 정답 (navy) */
 .cp1question1 .lst1 .li1.is-correct {
   background: rgba(52, 152, 219, 0.18); /* 라이트 블루 */
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-correct .t1 {
   font-weight: 700;
   color: #2980b9; /* 딥 블루 */
 }
-
 /* 오답 */
 .cp1question1 .lst1 .li1.is-wrong {
   background: rgba(160, 30, 30, 0.12);
   border-radius: 6px;
 }
-
 .cp1question1 .lst1 .li1.is-wrong .t1 {
   font-weight: 600;
   color: #7a1f1f;
 }
-
 /* 보기 버튼 (navy) */
 a.b2.help {
   color: #2980b9; /* 딥 블루 */
 }
-
 a.b2.help.on {
   font-weight: 600;
 }
 /* AUTO:exam-ui end */
-
-
-(위 CSS 그대로 붙여 넣으세요)
-
-
-(위 CSS 그대로 붙여 넣으세요)
 
 
 /* AUTO:clickable-ui start */
@@ -78,32 +62,24 @@ a.b2.help,
 .cp1question1 .lst1 .li1 a {
   cursor: pointer;
 }
-
 .cp1question1 .lst1 .li1:hover {
   background: rgba(0, 0, 0, 0.04);
 }
-
 a.b2.help:hover {
   opacity: 0.85;
 }
 /* AUTO:clickable-ui end */
-
-
 /* AUTO:mobile-scroll-fix start */
 html {
   scroll-behavior: smooth;
 }
-
 .container {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 /* AUTO:mobile-scroll-fix end */
-
-
 body {width:100%;}
-		
 	.eg1 {padding:10px 0px; text-align:center;width:100%;}
 	.tg2 {border-bottom:1px solid #ddd;padding:5% 5%;display:none;}
 	.cp1question1 {padding-bottom:12px;}
@@ -112,19 +88,76 @@ body {width:100%;}
   height: 100%;
   object-fit: contain; /* 또는 cover */
 }
+h2 a {
+  font-size: 16px;        /* 글씨 크기 */
+  text-decoration: none;  /* 밑줄 제거 */
+  color: #333;            /* 기본 글자 색 */
+  font-weight: 500;       /* 약간 두껍게 */
+  transition: color 0.3s ease; /* hover 시 부드럽게 색 변화 */
+}
+h2 a:hover {
+  color: #007acc;         /* hover 시 포인트 색 */
+}
+
+/* AUTO:cp1dlist2-style start */
+.cp1dlist2 {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+.cp1dlist2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.em2 {
+  color: #d63031;
+}
+/* AUTO:cp1dlist2-style end */
 
 </style>
 <body>
 <div class="container clearfix">
+<h2><a href="index.html"> &lt; 돌아가기</a></h2>
 
-
-
-
-
-
+<!-- cp1dlist2 -->
+<div class="cp1dlist2">
+<ul class="dl1">
+<li class="di1">
+<a class="a1">
+<b class="dt1">총 문제</b>
+<span class="dd1">80개</span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">맞춘 문제</b>
+<span class="dd1"><b class="em1">0개</b></span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">틀린 문제</b>
+<span class="dd1"><b class="em2">0개</b></span>
+</a>
+</li>
+<li class="di1">
+<a class="a1">
+<b class="dt1">안 푼 문제</b>
+<span class="dd1"><b class="em3">80개</b></span>
+</a>
+</li>
+</ul>
+</div>
+<!-- /cp1dlist2 -->
 
 <h3 class="hb1 h3">2회 모의고사</h3>
-
 <!-- cp1question1 -->
 <div class="cp1question1">
 	<div class="sg1">
@@ -132,9 +165,6 @@ body {width:100%;}
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터 그리고 데이터 사이언스의 미래</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1603);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -170,19 +200,11 @@ body {width:100%;}
 			B2B기업			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		B2B기업은 기업 간의 전자 상거래를 진행하여 지속적인 데이터가 생성 되기 어렵다. 반면에 B2C기업은 고객을 상대로 하기 때문에 고객의 데이터가 지속적으로 생성 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -210,8 +232,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#빅데이터									# 데이터 확보									# 기업 경쟁력									# 데이터 분석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -222,9 +243,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">데이터와 정보</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1604);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -260,19 +278,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			주문 수량			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		DIKW 피라미드에서 우량고객, 베스트셀러, 평균 구매액은 정보(Information)에 해당되고 주문수량은 데이터(Data)에 해당된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -300,8 +310,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#데이터									# 정보									# 분석									# 의사결정							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -312,9 +321,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">비즈니스 모델</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1605);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -350,19 +356,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			책임 원칙 훼손			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		민주주의 국가에서 채택한 형사 처벌은 잠재적 위협이 아닌 명확하게 행동한 결과에 대해 책임을 묻고 있다. 특정인이 빅데이터 분석 결과에 따라 특정한 행위를 할 가능성이 높다는 이유만으로 처벌 받는 것은 행위 결과에 대해서만 책임을 묻는다는 사회 원칙을 크게 훼손 할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -391,8 +389,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#빅데이터 위기 요인									# 책임 원칙 훼손									# 소셜 네트워크									# 사생활 침해									# 데이터 오용							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -403,9 +400,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1606);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -441,19 +435,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			렌즈			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		구글의 ‘Ngram Viewer’를 통해 우리가 확인하기 힘들었던 부분을 찾을 수 있도록 해 주는 빅데이터의 비유는 “렌즈”이다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -481,8 +467,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#빅데이터의 비유									# 렌즈									# 산업혁명의 석탄 철									# 21세기의 원유									# 플랫폼							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -493,9 +478,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1607);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -531,8 +513,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			은행 대출심사 알고리즘 작동 원리 이해의 어려움			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		빅데이터의 가치 산정이 어려운 이유는 다음과 같다.<br>
@@ -540,14 +520,8 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 2. 새로운 가치 창출<br>
 3. 분석 기술 발전<br>
 ②번은 위의 3가지에 해당하지 않는다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -573,8 +547,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#빅데이터									# 가치 산정									# 데이터 재사용									# 새로운 가치 창출							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -585,9 +558,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터 분석과 전략 인사이트</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1608);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -623,19 +593,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			사람들은 아이디어를 낸 사람이 누군지 보다는 아이디어 자체에 관심을 더 많이 가지고 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		하라스엔터테인먼트의 회장인 러브먼이 언급한 분석 기반 경영이 도입되지 못하는 이유로 “사람들은 아이디어 자체보다는 아이디어를 낸 사람이 누군지에 더 많이 관심을 가지고 있다.”고 이야기했다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -663,8 +625,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#분석 기반 경영									# 직관적 의사결정									# 혁신 저항									# 인재 부족							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -675,9 +636,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">전략 인사이트 도출을 위한 필요 역략</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1609);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -713,19 +671,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			복잡한 세계화에서 단순한 세계화로 변화했다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		최근의 사회경제적 환경은 단순 세계화에서 복잡한 세계화로 변화하고 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -753,8 +703,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#세계화									# 서비스 산업									# 시장 창조									# 창의적 문제 해결							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -765,9 +714,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터 그리고 데이터 사이언스의 미래</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1610);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -806,19 +752,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			가명처리(Pseudonymization) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		가명처리는 개인정보 중 주요 식별요소를 다른 값으로 대체하여 개인식별을 곤란하게 하는 기술이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -846,8 +784,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									#비식별화									# 가명처리									# 데이터 보호									# 개인정보							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -858,9 +795,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">전략 인사이트 도출을 위한 필요 역략</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1611);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -896,19 +830,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			디지털화(Digitalization) → 연결(Connection) → 에이전시(Agency) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		가치 패러다임의 변화는 Digitalization → Connection → Agency이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -917,8 +843,7 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<div class="t2">
 									# 빅데이터 시대									# 가치 패러다임의 변화									# 디지털화									# 연결									# 에이전시							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -929,9 +854,6 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			<span class="g1">1과목</span>
 			<span class="g1">빅데이터 그리고 데이터 사이언스의 미래</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1612);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -967,19 +889,11 @@ B2B기업은 다른 선택지에 비해 데이터를 확보할 수 있는 기회
 			CREATE			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		DML(Data Manipulation Language)는 테이블에 데이터 검색, 삽입, 수정, 삭제하는데 사용하며 SELECT, INSERT, UPDATE, DELETE 등이 있다. DDL(Data Definition Language)는 테이블이나 관계의 구조를 생성하는데 사용하며 CREAT, DROP, ALTER, TRUNCATE 등이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1007,8 +921,7 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<div class="t2">
 									#SQL									# DML									# DDL									# CREATE							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1019,9 +932,6 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<span class="g1">2과목</span>
 			<span class="g1">ETL(Extraction, Trans formation and Load)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1613);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1057,19 +967,11 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			데이터웨어하우스 내부의 데이터는 최종 사용자(end user)나 전산에 약한 분석가도 이해하기 쉬운 형태이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터웨어하우스는 비휘발성(Non Volatile)을 특징을 가지고 있으므로, 일단 데이터가 적재되면 일괄 처리(Batch 처리) 외에는 별도의 갱신이 이루어지지 않는다. 데이터웨어하우스는 데이터를 주제별로 저장하기 때문에 최종사용자 혹은 전산 지식에 약한 분석자도 이해하기 쉬운 형태를 취한다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1097,8 +999,7 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<div class="t2">
 									#데이터 웨어하우스									# 데이터 분석									# 의사결정 지원									# 운영 데이터베이스							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1109,9 +1010,6 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<span class="g1">2과목</span>
 			<span class="g1">분산 컴퓨팅 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1614);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1147,19 +1045,11 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			3개			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		맵리듀스에서 블록 크기의 기본값은 64MB이고, 맵 태스크 하나가 1개의 블록을 대상으로 연산을 수행한다. 따라서 320MB 크기의 파일을 대상으로 작업을 수행하면 5개의 맵 태스크가 생성된다. (320MB / 64MB = 5개)				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1173,8 +1063,7 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<div class="t2">
 									# 맵리듀스									# 맵 태스크							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1185,9 +1074,6 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			<span class="g1">2과목</span>
 			<span class="g1">ETL(Extraction, Trans formation and Load)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1615);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1223,19 +1109,11 @@ CREATE 명령어는 데이터베이스의 구조를 정의하는 DDL에 속하�
 			데이터가 스테이징 단계에서 타임스탬프, 데이터 값에 대한 체크 섬 등의 통제(Control) 정보들이 추가될 수 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터 스테이징 단계에서는 정기적인 ETL과 실시간 ETL을 혼용할 수 있고, 저장되는 테이블의 스키마는 데이터 원천의 구조에 의존한다. 데이터 원천과 스테이징 테이블과의 매핑은 일대일 혹은 일대다로 구성될 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1262,8 +1140,7 @@ ODS(Operational Data Store)는 실시간 또는 거의 실시간으로 운영 �
 			<div class="t2">
 									#데이터 스테이징									# 통제 정보									# 정규화 배제									# ETL 혼용									# 데이터 매핑							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1274,9 +1151,6 @@ ODS(Operational Data Store)는 실시간 또는 거의 실시간으로 운영 �
 			<span class="g1">2과목</span>
 			<span class="g1">분산 데이터 저장 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1616);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1312,19 +1186,11 @@ ODS(Operational Data Store)는 실시간 또는 거의 실시간으로 운영 �
 			HDFS는 데이터를 파일 단위로 저장하는 시스템이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		HDFS는 파일 데이터를 블록이나 청크 단위로 저장하며, 데이터에 대한 순차 접근 방식을 지원한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1352,8 +1218,7 @@ HDFS는 데이터를 블록 단위로 저장하는 시스템입니다. 각 파�
 			<div class="t2">
 									#HDFS									# 블록 저장									# 구글 파일 시스템									# 데이터 복제							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1364,9 +1229,6 @@ HDFS는 데이터를 블록 단위로 저장하는 시스템입니다. 각 파�
 			<span class="g1">2과목</span>
 			<span class="g1">데이터 통합 및 연계 기법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1617);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1402,19 +1264,11 @@ HDFS는 데이터를 블록 단위로 저장하는 시스템입니다. 각 파�
 			NoSQL, 초대형 분산 데이터 스토리지 등과 같은 데이터 인프라스트럭처는 전통적 데이터 처리 환경에서부터 사용되어 왔다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		NoSQL, 초대형 분산 데이터 스토리지 등은 빅데이터 처리 환경에서 사용하는 인프라스트럭처이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1442,8 +1296,7 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			<div class="t2">
 									#전통적 데이터 처리									# 빅데이터 처리									# OLAP									# NoSQL							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1454,9 +1307,6 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			<span class="g1">2과목</span>
 			<span class="g1">분산 컴퓨팅 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1618);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1492,19 +1342,11 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			HiveQL을 이용하여 테이블 생성, 삭제, 변경의 작업은 가능하지만 테이블 스키마를 변경하는 것은 불가능하다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		HiveQL을 이용하여 테이블 스키마도 변경할 수 있다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1519,8 +1361,7 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			<div class="t2">
 									# Apache Hive									# HiveQL									# 아파치 하이브									# 맵리듀스							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1531,9 +1372,6 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			<span class="g1">2과목</span>
 			<span class="g1">분산 데이터 저장 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1619);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1569,19 +1407,11 @@ NoSQL과 같은 데이터 인프라스트럭처는 빅데이터 환경에서 주
 			Oracle RAC 데이터베이스 서버는 무공유 클러스터 방식을 적용한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Oracle RAC는 공유 방식의 클러스터이다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1609,8 +1439,7 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<div class="t2">
 									#데이터베이스 클러스터									# MySQL 클러스터									# Oracle RAC									# 공유 디스크							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1621,9 +1450,6 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<span class="g1">2과목</span>
 			<span class="g1">대용량의 비정형 데이터 처리방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1620);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1659,19 +1485,11 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			암호화를 통해 데이터 전송시 높은 보안성을 제공한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		암호화를 통한 데이터 전송은 대용량 비정형 데이터 수집 시스템의 특징에 해당하지 않는다. 대용량 비정형 데이터 수집 시스템은 수집된 데이터가 저장소에 저장되는 과정에서 단계별로 혹은 인접한 단계끼리 신호를 주고받아 이벤트의 유실을 방지하는 방식으로 전송을 보장한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1686,8 +1504,7 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<div class="t2">
 									#비정형 데이터									# 비정형 데이터 수집							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1698,9 +1515,6 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<span class="g1">2과목</span>
 			<span class="g1">대용량의 비정형 데이터 처리방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1621);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1736,19 +1550,11 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			대용량 SQL 질의 기술 : Hive, Pig, Sqoop 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Sqoop은 관계형 데이터베이스와 하둡 간의 데이터 연동 기술에 해당한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1776,8 +1582,7 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<div class="t2">
 									#하둡 에코시스템									# 데이터 수집									# SQL 질의									# 워크플로 관리									# 실시간 쿼리							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1788,9 +1593,6 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<span class="g1">2과목</span>
 			<span class="g1">클라우드 인프라 기술</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1622);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1826,19 +1628,11 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			VMWare, Xen, KVM 등 은 대표적인 서버 가상화 기술로서 SaaS에 주로 활용된다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		대표적인 가상화 기술인 VMWare, Xen, KVM 등은 IaaS에 주로 활용된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1853,8 +1647,7 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<div class="t2">
 									# 클라우드 컴퓨팅									# 서버 가상화									# IaaS									# PaaS									# SaaS									# VMWare							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1865,9 +1658,6 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			<span class="g1">3과목</span>
 			<span class="g1">분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1623);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1903,19 +1693,11 @@ Oracle RAC는 무공유 클러스터 방식이 아니라 공유 디스크 방식
 			데이터 변환(Transformation) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터 전처리 프로세스를 통하여 분석용 데이터 셋이 편성되면 분석 목적에 맞는 변수를 선택하거나 데이터의 차원을 축소하여 데이터마이닝을 효율적으로 적용될 수 있도록 데이터셋을 변경하는 프로세스를 데이터 변환이라고 한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -1943,8 +1725,7 @@ KDD 분석 절차에서 데이터 차원을 축소하고 분석 목적에 맞는
 			<div class="t2">
 									#KDD									# 데이터 변환									# 차원 축소									# 변수 선택							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -1955,9 +1736,6 @@ KDD 분석 절차에서 데이터 차원을 축소하고 분석 목적에 맞는
 			<span class="g1">3과목</span>
 			<span class="g1">분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1624);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -1993,19 +1771,11 @@ KDD 분석 절차에서 데이터 차원을 축소하고 분석 목적에 맞는
 			각 단계는 폭포수 모델처럼 구성되어져 있다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		CRISP-DM 프로세스의 각 단계는 폭포수 모델처럼 일방향으로 구성되어 있지 않고 단계 간 피드백을 통하여 단계별 완성도를 높인다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2033,8 +1803,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#CRISP-DM									# 데이터 마이닝									# 프로세스 모델									# 유연한 구조							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2045,9 +1814,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1625);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2083,19 +1849,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			규제와 감사 : 분석을 수행하는 시스템 영역 및 이를 운영·관리하는 시스템의 관점에서 주제 도출			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		규제와 감사는 제품 생산 및 전달 과정 프로세스 중에서 발생하는 규제 및 보안의 관점에서 주제를 도출한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2123,8 +1881,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#비즈니스 모델 캔버스									# 핵심 자원									# 가치 제안									# 고객 세그먼트							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2135,9 +1892,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1626);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2173,19 +1927,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			분석적으로 사물을 인식하려는 ‘Why’관점에서 접근한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석적으로 사물을 인식하려는 ‘Why’ 관점은 일반적으로 사용되고 있는 문제 해결방식인 하향식 접근방식을 말한다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2213,8 +1959,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#상향식 접근방식									# 비지도 학습									# 데이터 분석									# What 관점							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2225,9 +1970,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 프로젝트 관리 방안</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1627);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2263,19 +2005,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			Analytic &amp; Accessibility			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 과제의 주요 관리 영역에는 Data Size, Data Complexity, Speed, Analytic &amp;Complexity, Accuracy&amp; Precision가 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2302,8 +2036,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#데이터 크기									# 데이터 복잡성									# 처리 속도									# 접근성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2314,9 +2047,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 거버넌스 체계 수립</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1628);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2352,19 +2082,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			Data Resource			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 거버넌스 체계 구성요소는 Process(과제 기획/운영 프로세스), System(IT 시스템/프로그램), Organization(분석 기획/관리 및 추진 조직), Data(데이터 거버넌스), Human Resource(분석 관련 교육/마인드 육성 체계)가 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2392,8 +2114,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#거버넌스 체계									# 데이터 분석									# 프로세스									# 시스템									# 조직							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2404,9 +2125,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 거버넌스 체계 수립</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1629);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2442,19 +2160,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			확산형 기업			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		포트폴리오 사분면에서 분석이 현재 부분적으로 도입되어 지속적인 확산이 필요한 기업들은 확산형 기업이라고 정의한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2481,8 +2191,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#데이터 분석									# 준비도									# 도입									# 확산									# 최적화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2493,9 +2202,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 프로젝트 관리 방안</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1630);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2531,19 +2237,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			분석 프로젝트의 일정계획 수립시 데이터 수집에 대한 철저한 통제와 관리가 필요하다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분석 프로젝트 관리에서 일정계획 수립시 데이터 수집에 대한 철저한 통제와 관리보다 분석 범위가 빈번하게 변경되므로 시간이 소요될 수도 있다. 따라서 Time Boxing 기법과 같은 방법으로 일정관리를 진행하는 것이 필요하다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2571,8 +2269,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#프로젝트 관리									# ISO 21500									# SPICE									# 데이터 수집									# 결과물 형태							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2583,9 +2280,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 과제 발굴</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1631);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2621,19 +2315,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			해당 고객에게 접근하는 유통 채널을 공급한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		채널은 기업이 고객세그먼트에게 가치를 제안하기 위해 커뮤니케이션을 하고 상품이나 서비스를 전달하는 방법을 의미한다. 커뮤니케이션, 물류, 판매채널 등 기업과 고객의 인터페이스 전반이 바로 채널이다. 유통 채널을 공급하는 것은 채널영역이 아니다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2660,8 +2346,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#비즈니스 모델 캔버스									# 채널									# 가치 전달									# 고객 관계									# 유통 채널							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2672,9 +2357,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">3과목</span>
 			<span class="g1">분석 기획 방향성 도출</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1632);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2710,19 +2392,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			프레이밍 효과, 고정 관념 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		기업에서 데이터에 기반한 의사결정을 방해하는 요소는 고정 관념, 편향된 생각, 프레이밍 효과이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2749,8 +2423,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#데이터 기반 의사결정									# 프레이밍 효과									# 고정 관념									# 편향									# 비판적 사고							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2761,9 +2434,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1633);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2799,19 +2469,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			지수분포			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		확률분포는 크게 이산형(Discrete)과 연속형(Continuous)으로 나눌 수 있다. 이산형 확률분포는 확률변수가 셀 수 있는 값(정수, 개수 등)을 가지는 반면, 연속형 확률분포는 확률변수가 연속적인 값(시간, 길이, 무게 등)을 가진다. 지수분포는 연속적인 '시간'을 다루므로 이산형 확률분포에 해당하지 않는다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2838,8 +2500,7 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<div class="t2">
 									#이산형 확률분포									# 연속형 확률분포									# 기하분포									# 이항분포									# 초기하분포									# 지수분포							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2850,9 +2511,6 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			<span class="g1">4과목</span>
 			<span class="g1">R 기초</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1634);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2888,19 +2546,11 @@ CRISP-DM은 폭포수 모델과 달리 각 단계가 고정된 순서로 진행�
 			데이터프레임은 테이블로 된 데이터 구조로써 행렬로 표현된다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		R에서 사용 가능한 데이터 오브젝트(행렬, 벡터, 데이터프레임, 리스트)에 관한 설명으로 데이터프레임은 테이블로 된 구조인 것은 맞지만 행렬이 아닌 리스트 구조로 구현된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -2928,8 +2578,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#R									# 데이터 오브젝트									# 벡터									# 리스트									# 행렬									# 데이터프레임							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -2940,9 +2589,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">R 기초</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1635);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -2978,19 +2624,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			a&lt;-c(1,10)			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		a&lt;-c(1,10)은 벡터 값으로 1, 10이 나타나지만, 나머지는 1부터 10까지의 수를 보여준다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3018,8 +2656,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#R 프로그래밍									# 벡터 생성									# c() 함수									# seq() 함수									# 콜론 연산자							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3030,9 +2667,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1636);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3068,19 +2702,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			표준화 자료로 추정한 계수가 가장 큰 변수 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		다중선형회귀분석의 종속변수를 설명하는 가장 중요한 독립변수는 추정한 계수가 클수록 종속변수에 가장 영향을 많이 미치게 된다. 특히 (β_{0})가 없는 표준화된 추정식을 만들게 되면 각 계수의 크기를 더욱 정확히 알 수 있게 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3107,8 +2733,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#다중선형회귀분석									# 표준화 회귀계수									# p-value									# 상관계수									# 변수 중요성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3119,9 +2744,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1637);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3160,19 +2782,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			25%			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		지지도를 구하는 공식은 P(A∩B)이므로 25%가 정답이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3189,8 +2803,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									# 연관성 규칙									# 지지도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3201,9 +2814,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1638);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3239,19 +2849,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			모집단의 분포가 정규분포에 가까워져야 표본평균의 분포가 정규분포로 근사하게 된다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		동일한 확률분포를 가진 독립 확률 변수의 분포는 n이 적당히 크다면(n은 30이상) 정규분포에 가까워진다는 정리이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3279,8 +2881,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#중심극한정리									# 표본평균									# 정규분포									# 모집단							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3291,9 +2892,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1639);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3329,19 +2927,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			비율척도는 측정대상의 값이 비율로 정의되는 자료를 의미하며 물가성장율, 흡연감소율의 정보가 해당된다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		비율척도는 측정대상의 간격에 대한 비율이 의미를 가지는 자료를 의미하고 무게, 나이, 시간, 거리 정보가 해당된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3368,8 +2958,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#명목척도									# 순서척도									# 구간척도									# 비율척도									# 데이터 척도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3380,9 +2969,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1640);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3418,19 +3004,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			연속형 확률변수는 확률변수의 공간이 무한한 경우를 의미하며 베르누이 확률분포, 포아송분포, 정규분포가 해당된다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		베르누이 확률분포, 포아송분포는 이산형 확률분포이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3457,8 +3035,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#확률변수									# 이산형									# 연속형									# 확률분포									# 확률질량함수									# 확률밀도함수							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3469,9 +3046,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1641);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3507,19 +3081,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			전진선택법으로 변수를 추가할 때 기존의 변수들의 중요도는 영향을 받지 않는다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		다중회귀분석에서 변수 선택법 중 전진선택법은 변수가 추가 되면 기존 변수들의 중요도에 영향을 받게 된다. 다시 말해, 변수를 추가했는데 이미 선택된 변수의 유의수준이 높아지면 추가한 변수를 활용하지 못하게 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3546,8 +3112,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#회귀분석									# 전진 선택법									# 후진 제거법									# 변수 선택									# 회귀모형							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3558,9 +3123,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">시계열분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1642);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3596,19 +3158,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			분해시계열의 분해 요소는 추세요인, 계절요인, 순환요인, 회귀요인으로 크게 4가지로 이루어진다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		분해 시계열의 분해 요소는 추세요인, 계절요인, 순환요인, 불규칙요인으로 크게 4가지로 이루어진다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3635,8 +3189,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#분해시계열									# 추세요인									# 계절요인									# 순환요인									# 불규칙요인							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3647,9 +3200,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1643);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3685,19 +3235,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			상관계수를 통해 모형의 설명력을 확인한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		다중회귀분석의 결과에서 모형의 적절함을 확인하기 위해서는 F 검정 통계량과 유의확률, t 통계량과 유의확률, R²값을 검정해야 한다. ①번과 같이 상관계수를 통해 모형의 설명력을 확인하는 것은 회귀분석 이전의 단계에서 실행해야한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3724,8 +3266,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#다중회귀분석									# 모형 적합성									# F-value									# t-value									# 상관계수									# 결정계수							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3736,9 +3277,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">주성분 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1644);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3774,19 +3312,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			p개의 변수들 을 중요한 m(p)개의 주성분으로 표현하여 전체 변동을 설명하는 것으로 m개의 주성분은 원래 변수와는 관계없이 생성된 변수들이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		p개의 변수들을 중요한 m(p)개의 주성분으로 표현하여 전체 변동을 설명하는 것으로 m개의 주성분은 원래 변수에서 선형결합으로 생성된 변수이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3813,8 +3343,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#주성분 분석									# 차원 축소									# 다중공선성									# 상관관계									# 선형 결합							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3825,9 +3354,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1645);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3866,19 +3392,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			모든 독립변수가 유의수준 0.1에서 유의하지 않다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		다중선형회귀분석 결과, 입력변수 중 wt는 유의수준 0.1하에서 유의하지만 나머지 변수는 유의하지 않다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3906,8 +3424,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#회귀분석									# 유의성									# p-value									# 후진제거법							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -3918,9 +3435,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1646);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -3956,19 +3470,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			통계학에 적용되는 교차확인(Cross-Validation)은 데이터 마이닝에서 활용할 수 없다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		필요에 따라서는 구축용과 시험용을 번갈아가며 사용하는 교차확인을 통해 모형을 평가하기도 한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -3995,8 +3501,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#데이터 분할									# 구축용 데이터									# 검정용 데이터									# 시험용 데이터									# 교차검증									# 데이터 마이닝							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4007,9 +3512,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1647);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4048,19 +3550,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			세 설명변수 모두 체납확률을 예측하는데 유익한 영향이 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		income은 체납확률을 예측하는데 유의한 변수가 아니다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4087,8 +3581,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#로지스틱 회귀									# 체납 확률									# 학생 여부									# 카드 잔고									# 연봉									# 유의성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4099,9 +3592,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1648);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4137,19 +3627,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			의사결정나무 알고리즘은 비정상적인 잡음 데이터에서는 민감하여 분류가 쉽지 않다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		의사결정나무 알고리즘은 비정상적인 잡음 데이터에 대해서도 민감함이 없이 분류할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4164,8 +3646,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									# 의사결정나무									# 해석 용이성									# 대용량 데이터									# 잡음 데이터									# 모형 정확도									# 과적합							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4176,9 +3657,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1649);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4214,19 +3692,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			관측된 자료로 구한 표본평균과 표본분산 등을 이용해 검정을 실시한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		비모수 검정 방법은 모집단의 분포에 대한 아무 제약을 가하지 않고 검정을 실시하고 관측된 자료의 수가 많지 않거나 자료가 개체간의 서열관계를 나타내는 경우 이용한다. 또 관측된 자료가 특정분포를 따른다고 가정할 수 없는 경우 이용한다. 관측된 자료로 구한 표본평균과 표본분산 등을 이용해 검정을 실시하는 것은 모수적검정 방법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4253,8 +3723,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#비모수적 방법									# 모수적 검정									# 모집단 분포									# 표본평균									# 표본분산									# 순위									# 서열 관계							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4265,9 +3734,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1650);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4303,19 +3769,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			사전에 주어진 목적이 없으므로 결과 해석이 쉽다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		사전에 주어진 목적이 없으므로 결과 해석이 어렵다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4341,8 +3799,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#비계층적 군집분석									# 데이터 구조									# 다양한 데이터									# 대용량 데이터									# 결과 해석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4353,9 +3810,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1651);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4397,19 +3851,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			나, 라			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		가, 다는 이미 분류된 데이터에 대해 분석을 하므로 지도(Supervised) 분석이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4429,8 +3875,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									# 비지도 학습									# 지도 학습									# 군집화									# 패턴 분석									# 추천 시스템									# 데이터 레이블									# 예측 모델							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4441,9 +3886,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1652);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4479,19 +3921,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			신뢰도			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		지지도 : 전체 거래 중 품목 A와 품목 B를 동시에 포함하는 거래의 비율이며, 향상도 : A가 주어지지 않았을 때의 품목 B의 확률에 비해 A가 주어졌을 때의 품목 B의 확률의 증가비율이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4518,8 +3952,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#연관분석									# 신뢰도									# 조건부 확률									# 지지도									# 특이도									# 민감도							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4530,9 +3963,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1653);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4571,19 +4001,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			모든 변수의 분산이 1이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		cor(attitude)를 통해서는 분산을 확인하는 것이 아니라 상관계수 값을 확인할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4602,8 +4024,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#상관계수									# 상관관계									# R프로그램 결과해석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4614,9 +4035,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1654);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4655,19 +4073,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			모든 환자들의 수면시간이 증가하였다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		모든 환자들의 수면시간이 증가했다는 결과를 summary(sleep$extra)를 통해서 확인이 불가능하다. mean, 3rd Qu.와 Max의 값으로 나머지는 확인이 가능하다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4694,8 +4104,7 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<div class="t2">
 									#수면유도제									# 수면 시간 변화									# 통계량									# 평균									# 최솟값									# 최댓값							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4706,9 +4115,6 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			<span class="g1">4과목</span>
 			<span class="g1">회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1655);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4747,19 +4153,11 @@ R에서 데이터 오브젝트는 다양한 형태로 존재하며, 각 오브�
 			ozone과 wind 간에는 양의 상관관계가 있다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		ozone과 wind 간에는 음의 상관관계가 있다. 				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4787,8 +4185,7 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<div class="t2">
 									#산점도 행렬									# 상관관계									# 선형 관계									# 비선형 관계							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4799,9 +4196,6 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1656);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4837,19 +4231,11 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			생성된 모델은 분석 데이터에 최적화되었기 때문에 훈련 데이터의 작은 변화에 민감하게 반응하는 경우는 발생하지 않는다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		생성된 모델이 훈련 데이터에 최적화되어 있기 때문에 테스트 데이터의 작은 변화에 민감하게 반응한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4877,8 +4263,7 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<div class="t2">
 									#과대적합									# 일반화									# 모델 복잡성									# 조기 종료							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4889,9 +4274,6 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1657);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -4930,19 +4312,11 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			98%			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		sparsity는 tdm 안에 0인 원소가 있는 %를 의미한다. 총 50개 중 0이 49개 있으므로 98%이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -4966,8 +4340,7 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<div class="t2">
 									# 희박성									# Term-Document Matrix							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -4978,9 +4351,6 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1658);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5019,19 +4389,11 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			전체 관측치 수는 70개이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		관측치의 개수가 70개가 아니라 자유도가 70이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5049,8 +4411,7 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<div class="t2">
 									#t-test									# 관측치 수									# 신뢰구간									# 점추정량									# 자유도									# R 프로그램 결과 해석							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5061,9 +4422,6 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1659);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5102,19 +4460,11 @@ ozone과 wind 간의 관계는 음의 상관관계가 있는 것으로 보입니
 			0.7853/0.06537			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		매우 큰 수(양수 또는 음수)를 부동소수점으로 표현할 때는 E 혹은 e를 이용하여 숫자에 지수를 추가할 수 있다. 지수가 있는 숫자 값은 E앞에 있는 숫자에 10을 지수번 만큼 곱한 값이다. 지수가 양수이면 그 수만큼 소수점을 오른쪽으로 이동시키고, 음수라면 그 수만큼 왼쪽으로 이동한다. 즉, 7.853e-01이면 0.7853가 되며, 6.537e-02는 0.06537이 된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5127,8 +4477,7 @@ t-value=Estimate/Std.Error<br>
 			<div class="t2">
 									# 회귀분석									# t값									# 추정치									# 표준오차							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5139,9 +4488,6 @@ t-value=Estimate/Std.Error<br>
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1660);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5177,19 +4523,11 @@ t-value=Estimate/Std.Error<br>
 			정규성 가정을 충족하지 못한 데이터 추가 수집 등을 통해 해결할 수 있다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		정규성 가정을 충족하지 못해 데이터를 추가 수집하더라도 데이터 수집 과정에서 이미 발생한 오차나 불확실성이 모델에 영향을 미칠 가능성이 있기 때문이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5216,8 +4554,7 @@ t-value=Estimate/Std.Error<br>
 			<div class="t2">
 									#잔차분석									# 정규성 검토									# Q-Q Plot									# 히스토그램									# Shapiro-Wilk Test									# Anderson-Darling Test									# 데이터 변환							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5228,9 +4565,6 @@ t-value=Estimate/Std.Error<br>
 			<span class="g1">4과목</span>
 			<span class="g1">연관분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1661);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5266,19 +4600,11 @@ t-value=Estimate/Std.Error<br>
 			자율적인(Unsupervised) 신경망 모델로서 역전파(Back Propagation) 알고리즘처럼 여러 단계의 피드백을 처리하면서 전방 패스(Feed-Forward Flow)를 사용하는 방법이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		SOM의 특징은 역전파(Back Propagation) 알고리즘 등을 이용하는 인공신경망과 달리 단 하나의 전방 패스(Feed-forward flow)를 사용함으로써 속도가 매우 빠르다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5304,8 +4630,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#SOM									# 비지도 학습									# 위치 관계 보존									# 경쟁 학습									# 전방 패스							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5316,9 +4641,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">고급회귀분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1662);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5357,19 +4679,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			등분산성 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		해당 잔차도는 등분산성의 가정을 위배하는 잔차도이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5396,8 +4710,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#회귀분석									# 잔차도									# 등분산성									# 이분산성									# 나팔 모양							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5408,9 +4721,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">사회연결망 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1663);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5446,19 +4756,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			네트워크 내에서 한 노드가 담당하는 매개자 혹은 중재자 역할의 정도를 측정하는 평가지표이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		매개 중심성은 네트워크 내에서 한 노드가 담당하는 매개자 혹은 중재자 역할의 정도를 측정하는 평가지표이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5486,8 +4788,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#매개 중심성									# 사회연결망 분석									# 중재자 역할									# 네트워크 흐름							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5498,9 +4799,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">데이터 마이닝 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1664);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5543,19 +4841,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			가 → 나 → 다 → 라 → 마 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		데이터마이닝 추진 단계는 목적정의 → 데이터 준비 → 데이터 가공 → 데이터마이닝 기법 적용 → 검증이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5577,8 +4867,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									# 데이터마이닝 추진 단계									# 목적정의									# 데이터 준비									# 데이터 가공									# 데이터마이닝 기법 적용									# 검증							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5589,9 +4878,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">군집분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1665);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5627,19 +4913,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			은닉층 노드(Hidden node)의 수가 많으면 일반화가 가능하다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		은닉층 노드의 수가 많으면 일반화가 어렵다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5666,8 +4944,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#다층 신경망									# 은닉층									# 은닉노드									# 출력층									# 입력층									# 과대적합									# 과소적합									# 일반화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5678,9 +4955,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">텍스트 마이닝</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1666);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5716,19 +4990,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			감성 분석(Sentiment Analysis) 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		감성 분석(Sentiment Analysis)는 문장에서 사용된 단어의 긍정·부정 여부에 따라 얼마나 긍정적인 단어가 많은지를 보고 특정 소스를 부여해 어떤 색을 띄고 있는 문장인지를 평가한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5756,8 +5022,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#감성 분석									# 텍스트 마이닝									# 긍정적									# 부정적							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5768,9 +5033,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1667);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5806,19 +5068,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			변수의 분포에서 비정상적으로 벗어난 값을 이상치(Outlier)라 하는데 이러한 이상치는 반드시 제거하고 분석해야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		이상치는 의도하지 않은 현상이지만 분석에 포함해야하는 경우도 있으므로 반드시 제거하고 분석을 실시해서는 안된다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5828,8 +5082,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									# 탐색적 데이터 분석									# 이상치									# 결측치									# 모델 성능									# 설명변수									# 데이터 표준화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5840,9 +5093,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석 방법론</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1668);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5881,19 +5131,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			실린더 개수가 4일 때 제 1사분위수는 실린더 개수가 6일 때 제 3사분위수보다 작다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		실린더 개수가 4일 때, 제 1사분위수는 실린더 개수가 6일 때 제 3사분위수보다 크게 나타나고 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -5920,8 +5162,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#상자 그림									# 중앙값									# 사분위수									# 이상값									# 변동성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -5932,9 +5173,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">사회연결망 분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1669);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -5970,19 +5208,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			노드 중심성(Node centrality)			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		네트워크 구조를 파악하기 위한 기법은 연결정도 중심성, 근접 중심성, 매개 중심성, 위세 중심성이 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6009,8 +5239,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#사회연결망 분석									# 중심성									# 연결정도 중심성									# 근접 중심성									# 위세 중심성									# 네트워크 구조							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6021,9 +5250,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">앙상블 기법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1670);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6059,19 +5285,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			부스팅은 배깅의 과정과 유사하여 재표본 과정에서 각 자료에 동일한 확률을 부여하여 여러 모형을 만들어 결합하는 방법이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		부스팅은 배깅의 과정과 유사하나 붓스트랩 표본을 구성하는 재표본 과정에서 각 자료에 동일한 확률을 부여하는 것이 아니라, 분류가 잘못된 데이터에 더 큰 가중을 주어 표본을 추출한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6099,8 +5317,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#앙상블 모형									# 배깅									# 부스팅									# 랜덤 포레스트							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6111,9 +5328,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">분류분석</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1671);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6149,19 +5363,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			비지도학습기법(Unsupervised Learning)으로 각 변수의 영역을 반복적으로 분할함으로써 전체 영역에서의 규칙을 생성하는 방법이다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		의사결정나무는 지도학습기법(supervised Learning)이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6189,8 +5395,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#의사결정 나무									# 지도학습									# 변수 선택									# 교호작용							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6201,9 +5406,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">4과목</span>
 			<span class="g1">통계분석의 이해</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1672);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6243,19 +5445,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			계통추출법 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		계통추출법은 모집단의 모든 원소들에게 1,2,3,...,N의 일련번호를 부여하고 이를 순서대로 나열한 후에 K개(K=N/n)씩 n개의 구간으로 나누고 첫 구간(1,2,3,...,N)에서 하나를 임의로 선택한 후에 K개씩 띄어서 표본을 추출하는 방법이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6281,8 +5475,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									#계통추출법									# 단순랜덤추출법									# 집락추출법									# 층화추출법									# 표본추출							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6293,9 +5486,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 인사이트 프로세스의 의미</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1673);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6331,19 +5521,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			지식은 특정한 세부 사항 각각을 설명하기 때문에, 다양한 상황에서 적용하기 위해서는 지혜가 되어야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		지식은 경험을 통해 형성된 지식은 특정한 세부 사항만을 설명하는 것이 아니라, 다양한 상황에서 적용할 수 있게 일반화한 것이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6358,8 +5540,7 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<div class="t2">
 									# 시각적 위계요소									# 데이터									# 정보									# 지식									# 지혜							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6370,9 +5551,6 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1674);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6408,19 +5586,11 @@ SOM(Self Organizing Maps)은 고차원 데이터를 저차원으로 변환하여
 			XML은 사람보다는 기계가 읽을 수 있는 형식으로 부호화하여 정의한다. 			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		XML은 문서를 사람과 기계 모두가 읽을 수 있는 형식으로 부호화하는 규칙의 집합을 정의한다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6448,8 +5618,7 @@ XML은 사람이 읽기 쉬운 형식으로 설계되었으며, 태그를 사용
 			<div class="t2">
 									#데이터 시각화									# 프로그래밍 기술									# XML									# JSON									# CSV									# TSV							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6460,9 +5629,6 @@ XML은 사람이 읽기 쉬운 형식으로 설계되었으며, 태그를 사용
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 구현 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1675);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6498,19 +5664,11 @@ XML은 사람이 읽기 쉬운 형식으로 설계되었으며, 태그를 사용
 			Visual.ly			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Visual.ly는 데이터 시각화, 인포그래픽, 비디오 제작 등을 전문으로 하는 서비스 플랫폼이지, 데이터를 시각화하는 데 사용되는 프로그래밍 라이브러리가 아니다. 반면, D3.js, Polymaps, Google Charts는 모두 데이터를 시각화하기 위해 개발된 라이브러리 또는 API이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6538,8 +5696,7 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<div class="t2">
 									#시각화 라이브러리									# Visual.ly									# Polymaps									# D3.js									# Google Charts							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6550,9 +5707,6 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<span class="g1">5과목</span>
 			<span class="g1">탐색(1단계)</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1676);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6588,19 +5742,11 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			로그 데이터와 로그 데이터를 한 번 더 정제한 데이터는 구분할 수 있어야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		‘이벤트 기록으로서의 접근’에 대한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6615,8 +5761,7 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<div class="t2">
 									# 객체지향 관점									# 로그 데이터							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6627,9 +5772,6 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1677);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6668,19 +5810,11 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			점그래프			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		점그래프에 대한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6706,8 +5840,7 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<div class="t2">
 									#점그래프									# 두 변수									# 연관 관계									# 시각화									# 공간 효율성							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6718,9 +5851,6 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			<span class="g1">5과목</span>
 			<span class="g1">라이브러리 기반의 시각화 구현 : D3.js</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1678);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6756,19 +5886,11 @@ Visual.ly는 시각화 라이브러리가 아니라, 시각적 콘텐츠를 공�
 			대부분 SVG 객체를 기반으로 동작하지만, 간혹 Canvas 객체를 활용하기도 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		①번은 CSS에 관한 설명, ③번은 domain( )함수(range( )함수는 출력 값 범위), ④번은 transform이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6794,8 +5916,7 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			<div class="t2">
 									#D3.js									# SVG									# Canvas									# scale									# axis									# CSS									# 데이터 시각화							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6806,9 +5927,6 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1679);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6844,19 +5962,11 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			시각적 정보 표현에서는 심리적 무게감에 따라 정보의 위계표현이 힘들기 때문에, 크기를 잘 사용해야 한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		시각적 정보 표현에서는 심리적 무게감에 따라 정보의 위계표현이 가능하다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6883,8 +5993,7 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			<div class="t2">
 									#타이포그래피									# 서체									# 심리적 무게감									# 가독성									# 정보 위계							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6895,9 +6004,6 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 구현 개요</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1680);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -6933,19 +6039,11 @@ D3.js는 데이터 기반의 문서 조작을 위한 JavaScript 라이브러리�
 			Tableau에서는 사용자가 데이터 소스의 필드들을 Dimension이나 Measure로 분할하면, 다양한 분석을 수행하기 어렵다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		Tableau에서 demension이나 measure로 자동 분할하여 매우 직관적이고 빠르게 분석에 적용할 수 있다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -6971,8 +6069,7 @@ Tableau는 데이터 시각화 도구로, 다양한 데이터 소스와 연결�
 			<div class="t2">
 									#Tableau									# 데이터 시각화									# VizQLTM									# Dimension									# Measure							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -6983,9 +6080,6 @@ Tableau는 데이터 시각화 도구로, 다양한 데이터 소스와 연결�
 			<span class="g1">5과목</span>
 			<span class="g1">시각화 방법</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1681);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -7024,19 +6118,11 @@ Tableau는 데이터 시각화 도구로, 다양한 데이터 소스와 연결�
 			지리적인 것만이 아니라 공간적으로 구분하는 것 모두를 포괄한다.			</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		②번은 알파벳, ③번은 시간, ④번은 카테고리에 대한 설명이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -7062,8 +6148,7 @@ LATCH는 정보의 분류 방법을 설명하는 모델로, Location(위치), Al
 			<div class="t2">
 									#LATCH									# 위치									# 지리적 구분									# 공간적 구분									# 정보 분류							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
@@ -7074,9 +6159,6 @@ LATCH는 정보의 분류 방법을 설명하는 모델로, Location(위치), Al
 			<span class="g1">5과목</span>
 			<span class="g1">분석 도구를 이용한 시각화 구현 : R</span>
 			<b class=""></b> <!-- 정답 s1 | 오답 s2 -->
-		</div>
-		<div class="w2">
-			<button type="button" class="b1 button type0 m-cunning " onclick="bookmark(1682);" title="컨닝페이퍼에 추가"><i class="ic1"></i><span class="t1 blind">북마크</span></button>
 		</div>
 	</div>
 	<div class="tg1">
@@ -7117,19 +6199,11 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
 						</span>
 					</div>
         <br>
-          
-        
 				<strong class="tt1">해설</strong>
 		<div class="t1">
 		해당 코드는 산점도를 그리는 코드이다.				</div>
-        
-		<!-- 비기봇 해설 -->
-				<a class="more">
-			<span class="more-t1">
-				<i>비</i><i>기</i><i>봇</i><i>에</i><i>게</i><i>&nbsp;</i><i>문</i><i>의</i><i>중</i><i>…</i>
-			</span>
-			<i class="more-ic1"></i>
-		</a>
+		
+				
 		<div class="more-c">
 			<strong class="tt1">비기봇 해설</strong>
 			<div class="t1">
@@ -7138,24 +6212,20 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
 			<div class="t2">
 									#ggplot2									# geom_point							</div>
 		</div>
-		 
-		<!-- /비기봇 해설 -->
+		
 	</div>
 </div>
 <!-- /cp1question1 -->
-
 <script>/*<![CDATA[*/
-	$('.w1').remove();
+	//$('.w1').remove();
 	$('.w2').remove();
 	// 1) 인라인 style 제거 (초기 꼬임 방지)
 	$('.tg2[style]').removeAttr('style');
-
 	// 2) 클릭: href로 연결된 id를 정확히 토글
 	$('.b2.help').on('click', function(e){
 	e.preventDefault();
 	var target = $(this).attr('href'); // "#m-help1a1"
 	var $panel = $(target);
-
 	// 첫 클릭부터 확실히 반응하도록 show/hide로 분기
 	if ($panel.is(':visible')) {
 	  $panel.hide(); // 또는 $panel.addClass('is-hidden');
@@ -7164,47 +6234,29 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
 	}
 	// 애니메이션 원하면: $panel.slideToggle(150);
 	});
-	
 /*]]>*/
-
-
 </script>
-
 </div>
-
-(위 JS 그대로 붙여 넣으세요)
-
-
-
-
-
-
-(위 JS 그대로 붙여 넣으세요)
 
 
 <!-- AUTO:mobile-scroll-fix-js start -->
 <script>
 (function () {
-
   // ---------- utils ----------
   function getPanelFromBtn(btn) {
     const sel = btn.getAttribute('href');
     if (!sel || !sel.startsWith('#')) return null;
     return document.querySelector(sel);
   }
-
   function isOpen(panel) {
     return panel && getComputedStyle(panel).display !== 'none';
   }
-
   function setOpen(btn, panel, open) {
     if (!btn || !panel) return;
-
     if (open) {
       panel.style.display = 'block';
       btn.classList.add('on');
       btn.setAttribute('aria-expanded', 'true');
-
       setTimeout(() => {
         panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 50);
@@ -7214,12 +6266,10 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
       btn.setAttribute('aria-expanded', 'false');
     }
   }
-
   // ---------- storage ----------
   function pageKeyPrefix() {
     return 'exam:' + (location.pathname || 'page') + ':';
   }
-
   function getQuestionId(qBox) {
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     if (!btn) return null;
@@ -7227,11 +6277,9 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
     if (!href || !href.startsWith('#')) return null;
     return href.slice(1);
   }
-
   function storageKey(qId) {
     return pageKeyPrefix() + qId;
   }
-
   // 정답 번호: 해설 패널 내 i.t2n (예: 2)
   function getCorrectIndex(panel) {
     const n = panel ? panel.querySelector('i.t2n') : null;
@@ -7239,25 +6287,20 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
     const v = parseInt((n.textContent || '').trim(), 10);
     return Number.isFinite(v) ? v : null; // 1-based
   }
-
   function clearState(qBox) {
     qBox.querySelectorAll('.lst1 .li1').forEach(li => {
       li.classList.remove('is-selected', 'is-correct', 'is-wrong');
     });
   }
-
   function applyResult(qBox, idx) {
     const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
     const selected = options[idx - 1];
     if (!selected) return;
-
     selected.classList.add('is-selected');
-
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     const panel = btn ? getPanelFromBtn(btn) : null;
     const correct = getCorrectIndex(panel);
     if (!correct) return;
-
     if (idx === correct) {
       selected.classList.add('is-correct');
     } else {
@@ -7266,7 +6309,6 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
       if (right) right.classList.add('is-correct');
     }
   }
-
   function saveChoice(qBox, idx) {
     const qId = getQuestionId(qBox);
     if (!qId) return;
@@ -7274,72 +6316,148 @@ p + geom_point(aes(colour = factor(cyl)), size = 4)					</span>
       localStorage.setItem(storageKey(qId), String(idx));
     } catch (e) {}
   }
-
   function restoreChoices() {
     document.querySelectorAll('.cp1question1').forEach(qBox => {
       const qId = getQuestionId(qBox);
       if (!qId) return;
-
       let v = null;
       try {
         v = localStorage.getItem(storageKey(qId));
       } catch (e) {}
-
       const idx = v ? parseInt(v, 10) : null;
       if (!idx || !Number.isFinite(idx)) return;
-
       clearState(qBox);
       applyResult(qBox, idx);
     });
   }
-
   // ---------- 1) 보기 버튼 토글 (충돌 방지) ----------
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('a.b2.help');
     if (!btn) return;
-
     const panel = getPanelFromBtn(btn);
     if (!panel) return;
-
     // 기존 스크립트(여러 개 존재)와 충돌 방지
     e.preventDefault();
     e.stopImmediatePropagation();
-
     setOpen(btn, panel, !isOpen(panel));
   }, true);
-
   // ---------- 2) 선지 클릭: 선택 표시 + 정답표시 + 저장 + 해설 오픈 ----------
   document.addEventListener('click', function (e) {
     const li = e.target.closest('.cp1question1 .lst1 .li1');
     if (!li) return;
-
     const qBox = li.closest('.cp1question1');
     if (!qBox) return;
-
     const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
     const idx = options.indexOf(li) + 1;
     if (!idx) return;
-
     clearState(qBox);
     applyResult(qBox, idx);
     saveChoice(qBox, idx);
-
     // 해설 자동 오픈
     const btn = qBox.querySelector('a.b2.help[href^="#"]');
     const panel = btn ? getPanelFromBtn(btn) : null;
     if (btn && panel) setOpen(btn, panel, true);
   }, true);
-
   // ---------- init ----------
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', restoreChoices);
   } else {
     restoreChoices();
   }
-
 })();
 </script>
 <!-- AUTO:mobile-scroll-fix-js end -->
+
+<!-- AUTO:score-counter start -->
+<script>
+(function () {
+  function qsa(sel, root) { return Array.from((root || document).querySelectorAll(sel)); }
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+
+  function setText(el, n) {
+    if (!el) return;
+    el.textContent = String(n) + '개';
+  }
+
+  function updateTotal(total) {
+    const block = qs('.cp1dlist2');
+    if (!block) return;
+    qsa('.cp1dlist2 .di1', block).forEach(li => {
+      const label = (qs('.dt1', li)?.textContent || '').trim();
+      if (label === '총 문제') {
+        const dd = qs('.dd1', li);
+        if (dd) dd.textContent = String(total) + '개';
+      }
+    });
+  }
+
+  function getPanelFromQ(qBox) {
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    if (!btn) return null;
+    const href = btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return null;
+    return document.querySelector(href);
+  }
+
+  function getCorrectIndex(panel) {
+    const n = panel ? panel.querySelector('i.t2n') : null;
+    if (!n) return null;
+    const v = parseInt((n.textContent || '').trim(), 10);
+    return Number.isFinite(v) ? v : null; // 1-based
+  }
+
+  function recompute() {
+    const total = qsa('.cp1question1').length;
+    let correct = 0;
+    let wrong = 0;
+
+    qsa('.cp1question1').forEach(qBox => {
+      const state = qBox.getAttribute('data-answer-state');
+      if (state === 'correct') correct += 1;
+      else if (state === 'wrong') wrong += 1;
+    });
+
+    const unanswered = Math.max(0, total - (correct + wrong));
+
+    updateTotal(total);
+    setText(qs('.cp1dlist2 .em1'), correct);
+    setText(qs('.cp1dlist2 .em2'), wrong);
+    setText(qs('.cp1dlist2 .em3'), unanswered);
+  }
+
+  function handle(e) {
+    const li = e.target.closest('.cp1question1 .lst1 .li1');
+    if (!li) return;
+
+    const qBox = li.closest('.cp1question1');
+    if (!qBox) return;
+
+    const options = qsa('.lst1 .li1', qBox);
+    const idx = options.indexOf(li) + 1; // 1-based
+    if (idx <= 0) return;
+
+    const panel = getPanelFromQ(qBox);
+    const correctIdx = getCorrectIndex(panel);
+    if (!correctIdx) {
+      qBox.removeAttribute('data-answer-state');
+      recompute();
+      return;
+    }
+
+    qBox.setAttribute('data-answer-state', (idx === correctIdx) ? 'correct' : 'wrong');
+    recompute();
+  }
+
+  // click이 막혀도 동작하도록 pointerup도 함께 수신(충돌 방어)
+  document.addEventListener('click', handle, true);
+  document.addEventListener('pointerup', handle, true);
+
+  function init() { recompute(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+<!-- AUTO:score-counter end -->
 
 </body>
 </html>
