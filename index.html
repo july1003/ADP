@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ADP Study</title>
   <style>
+/* AUTO:mobile-scroll-fix start */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* AUTO:mobile-scroll-fix end */
+
+
     body {
       font-family: "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
       margin: 0;
@@ -14,11 +27,7 @@
     }
 
     /* 중앙 정렬 컨테이너 */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 18px 20px 40px;
-    }
+    
 
     h1 {
       margin: 0 0 20px;
@@ -140,9 +149,7 @@
 
     /* 모바일: 더 컴팩트 */
     @media (max-width: 600px) {
-      .container {
-        padding: 14px 14px 32px;
-      }
+      
       .section-title {
         font-size: 16px;
         padding: 10px;
@@ -410,5 +417,34 @@
     loadRecent();
     bindRecentClickDelegation();
   </script>
+
+<!-- AUTO:mobile-scroll-fix-js start -->
+<script>
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a.help');
+  if (!link) return;
+
+  const targetId = link.getAttribute('href');
+  if (!targetId || !targetId.startsWith('#')) return;
+
+  const target = document.querySelector(targetId);
+  if (!target) return;
+
+  e.preventDefault();
+
+  // 해설 열기
+  target.style.display = 'block';
+
+  // 모바일 대응: DOM 반영 후 스크롤
+  setTimeout(() => {
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 50);
+});
+</script>
+<!-- AUTO:mobile-scroll-fix-js end -->
+
 </body>
 </html>
