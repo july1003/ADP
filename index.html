@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADP Study</title>
+  <style>
+    body {
+      font-family: "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #222;
+    }
+
+    /* 중앙 정렬 컨테이너 */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 20px 40px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 30px;
+	  text-aling:center
+    }
+.header-banner {
+    position: relative;
+    background-image: url("./images/header-bg.jpg"); /* 이미지 파일 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 28px 20px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.header-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75); /* 가독성 확보 */
+}
+
+.page-title {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}	
+
+    /* Recent section */
+    .recent-box {
+      border: 2px solid #007acc;
+      padding: 12px;
+      margin-bottom: 18px;
+      background-color: #f9fcff;
+      border-radius: 6px;
+    }
+
+    /* Accordion header */
+    .section-title {
+      cursor: pointer;
+      margin-top: 18px;
+      padding: 10px 12px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      user-select: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      border-radius: 6px;
+    }
+
+    .title-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .chevron {
+      display: inline-block;
+      width: 18px;
+      text-align: center;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .title-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .count-badge {
+      font-size: 13px;
+      color: #555;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 2px 8px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    /* Accordion content */
+    .section-content {
+      border: 1px solid #ccc;
+      border-top: none;
+      padding: 10px 12px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    /* 리스트 */
+    ul {
+      list-style-type: disc;
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    li {
+      min-height: 32px;
+      line-height: 32px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #007acc;
+    }
+
+    /* 모바일: 더 컴팩트 */
+    @media (max-width: 600px) {
+      .container {
+        padding: 14px 14px 32px;
+      }
+      .section-title {
+        font-size: 16px;
+        padding: 10px;
+      }
+      li {
+        line-height: 30px;
+      }
+    }
+	
+
+	
+  </style>
+</head>
+
+<body>
+  <div class="container">
+	<div class="header-banner">
+		 <h1>2026 ADP 데이터분석전문가 필기 대비</h1>
+	</div>
+  
+   
+
+    <!-- 최근 본 문제 -->
+    <div class="recent-box">
+      <strong>📌 최근 본 문제</strong>
+      <ul id="recentList"></ul>
+    </div>
+
+    <!-- 예상문제 -->
+    <div class="section-title" data-key="pred" onclick="toggleSection(this)">
+      <span class="title-left">
+        <span class="chevron" aria-hidden="true">▼</span>
+        <span class="title-text">📘 예상문제</span>
+      </span>
+      <span class="count-badge" data-count-for="pred">(0)</span>
+    </div>
+    <div class="section-content" data-key="pred">
+      <ul>
+        <li><a href="PredEaxm_1Part.html" onclick="saveRecent(this)">예상문제_1Part</a></li>
+        <li><a href="PredEaxm_2Part_chapt1.html" onclick="saveRecent(this)">예상문제_2Part_chapt1</a></li>
+        <li><a href="PredEaxm_2Part_chapt2.html" onclick="saveRecent(this)">예상문제_2Part_chapt2</a></li>
+        <li><a href="PredEaxm_3Part.html" onclick="saveRecent(this)">예상문제_3Part</a></li>
+        <li><a href="PredEaxm_4Part_chapt1.html" onclick="saveRecent(this)">예상문제_4Part_chapt1</a></li>
+        <li><a href="PredEaxm_4Part_chapt2.html" onclick="saveRecent(this)">예상문제_4Part_chapt2</a></li>
+        <li><a href="PredEaxm_4Part_chapt3.html" onclick="saveRecent(this)">예상문제_4Part_chapt3</a></li>
+        <li><a href="PredEaxm_4Part_chapt4.html" onclick="saveRecent(this)">예상문제_4Part_chapt4</a></li>
+        <li><a href="PredEaxm_4Part_chapt5.html" onclick="saveRecent(this)">예상문제_4Part_chapt5</a></li>
+        <li><a href="PredEaxm_4Part_chapt6.html" onclick="saveRecent(this)">예상문제_4Part_chapt6</a></li>
+        <li><a href="PredEaxm_5Part_chapt1.html" onclick="saveRecent(this)">예상문제_5Part_chapt1</a></li>
+        <li><a href="PredEaxm_5Part_chapt2.html" onclick="saveRecent(this)">예상문제_5Part_chapt2</a></li>
+        <li><a href="PredEaxm_5Part_chapt3.html" onclick="saveRecent(this)">예상문제_5Part_chapt3</a></li>
+      </ul>
+    </div>
+
+    <!-- 기출문제 -->
+    <div class="section-title" data-key="prev" onclick="toggleSection(this)">
+      <span class="title-left">
+        <span class="chevron" aria-hidden="true">▼</span>
+        <span class="title-text">📕 기출문제</span>
+      </span>
+      <span class="count-badge" data-count-for="prev">(0)</span>
+    </div>
+    <div class="section-content" data-key="prev">
+      <ul>
+        <li><a href="PrevEaxm_25.html" onclick="saveRecent(this)">기출문제_25</a></li>
+        <li><a href="PrevEaxm_27-P.html" onclick="saveRecent(this)">기출문제_27-P</a></li>
+        <li><a href="PrevEaxm_27.html" onclick="saveRecent(this)">기출문제_27</a></li>
+        <li><a href="PrevEaxm_28.html" onclick="saveRecent(this)">기출문제_28</a></li>
+        <li><a href="PrevEaxm_29-D.html" onclick="saveRecent(this)">기출문제_29-D</a></li>
+        <li><a href="PrevEaxm_29.html" onclick="saveRecent(this)">기출문제_29</a></li>
+        <li><a href="PrevEaxm_34-A.html" onclick="saveRecent(this)">기출문제_34-A</a></li>
+        <li><a href="PrevEaxm_34.html" onclick="saveRecent(this)">기출문제_34</a></li>
+      </ul>
+    </div>
+
+    <!-- 모의고사 -->
+    <div class="section-title" data-key="mock" onclick="toggleSection(this)">
+      <span class="title-left">
+        <span class="chevron" aria-hidden="true">▼</span>
+        <span class="title-text">📝 모의고사</span>
+      </span>
+      <span class="count-badge" data-count-for="mock">(0)</span>
+    </div>
+    <div class="section-content" data-key="mock">
+      <ul>
+        <li><a href="mock01.html" onclick="saveRecent(this)">모의고사 1</a></li>
+        <li><a href="mock02.html" onclick="saveRecent(this)">모의고사 2</a></li>
+        <li><a href="mock03.html" onclick="saveRecent(this)">모의고사 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // 상태 저장 키
+    // =========================
+    const STORAGE_KEY_ACCORDION = "adpAccordionState";
+    const STORAGE_KEY_RECENT = "recentItems";
+
+    // =========================
+    // 내부 유틸: 섹션 찾기
+    // =========================
+    function getContentByKey(key) {
+      return document.querySelector(`.section-content[data-key="${key}"]`);
+    }
+
+    function getTitleByKey(key) {
+      return document.querySelector(`.section-title[data-key="${key}"]`);
+    }
+
+    function setOpenStateByKey(key, shouldOpen) {
+      const contentEl = getContentByKey(key);
+      const titleEl = getTitleByKey(key);
+      const chevronEl = titleEl.querySelector(".chevron");
+
+      contentEl.style.display = shouldOpen ? "block" : "none";
+      contentEl.dataset.open = shouldOpen ? "true" : "false";
+      chevronEl.textContent = shouldOpen ? "▼" : "▶";
+    }
+
+    // =========================
+    // Accordion: 싱글 오픈 모드 + 아이콘 + 상태저장
+    // =========================
+    function toggleSection(titleEl) {
+      const key = titleEl.dataset.key;
+      const contentEl = getContentByKey(key);
+      const isOpen = contentEl.dataset.open === "true";
+
+      // 열려고 하는 경우: 다른 섹션은 닫는다 (싱글 오픈)
+      if (!isOpen) {
+        document.querySelectorAll(".section-content").forEach(other => {
+          const otherKey = other.dataset.key;
+          if (otherKey !== key) setOpenStateByKey(otherKey, false);
+        });
+        setOpenStateByKey(key, true);
+      } else {
+        // 닫기
+        setOpenStateByKey(key, false);
+      }
+
+      saveAccordionState();
+    }
+
+    function saveAccordionState() {
+      const state = {};
+      document.querySelectorAll(".section-content").forEach(content => {
+        const key = content.dataset.key;
+        state[key] = (content.dataset.open === "true");
+      });
+      localStorage.setItem(STORAGE_KEY_ACCORDION, JSON.stringify(state));
+    }
+
+    function loadAccordionState() {
+      const raw = localStorage.getItem(STORAGE_KEY_ACCORDION);
+      if (!raw) return null;
+      try {
+        return JSON.parse(raw);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // =========================
+    // 섹션 카운트 자동 계산 (li 개수)
+    // =========================
+    function updateSectionCounts() {
+      document.querySelectorAll(".section-content").forEach(content => {
+        const key = content.dataset.key;
+        const count = content.querySelectorAll("li").length;
+        const badge = document.querySelector(`.count-badge[data-count-for="${key}"]`);
+        if (badge) badge.textContent = `(${count})`;
+      });
+    }
+
+    // =========================
+    // 모바일 기본 접힘 / 데스크톱 기본 펼침
+    // 단, 저장된 상태가 있으면 저장 상태 우선
+    // =========================
+    function initAccordion() {
+      const saved = loadAccordionState();
+      const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+      // saved가 있으면 그대로 복원
+      if (saved) {
+        Object.keys(saved).forEach(key => setOpenStateByKey(key, !!saved[key]));
+        return;
+      }
+
+      // saved가 없으면 기본값 적용:
+      // - 모바일: 모두 닫힘
+      // - 데스크톱: "첫 섹션만 열기" (싱글 오픈 모드와 일관)
+      const keys = Array.from(document.querySelectorAll(".section-title")).map(t => t.dataset.key);
+
+      if (isMobile) {
+        keys.forEach(k => setOpenStateByKey(k, false));
+      } else {
+        keys.forEach((k, i) => setOpenStateByKey(k, i === 0));
+      }
+
+      saveAccordionState();
+    }
+
+    // =========================
+    // Recent items
+    // - 섹션 내 링크 클릭: 기존 onclick(saveRecent(this)) 유지
+    // - "최근 본 문제" 목록 링크 클릭 시에도 저장되도록 위임 처리
+    // =========================
+    function saveRecent(linkEl) {
+      const item = {
+        name: linkEl.innerText,
+        href: linkEl.getAttribute("href")
+      };
+
+      let recent = [];
+      try {
+        recent = JSON.parse(localStorage.getItem(STORAGE_KEY_RECENT)) || [];
+      } catch (e) {
+        recent = [];
+      }
+
+      recent = recent.filter(r => r.href !== item.href);
+      recent.unshift(item);
+      recent = recent.slice(0, 3);
+
+      localStorage.setItem(STORAGE_KEY_RECENT, JSON.stringify(recent));
+    }
+
+    function loadRecent() {
+      let recent = [];
+      try {
+        recent = JSON.parse(localStorage.getItem(STORAGE_KEY_RECENT)) || [];
+      } catch (e) {
+        recent = [];
+      }
+
+      const ul = document.getElementById("recentList");
+      ul.innerHTML = "";
+
+      recent.forEach(r => {
+        const li = document.createElement("li");
+        // 최근 목록도 클릭 시 saveRecent 되도록 data-recent-link 부여
+        li.innerHTML = `<a href="${r.href}" data-recent-link="1">${r.name}</a>`;
+        ul.appendChild(li);
+      });
+    }
+
+    // "최근 본 문제" 영역 클릭 위임: 링크 클릭 시 저장
+    function bindRecentClickDelegation() {
+      const ul = document.getElementById("recentList");
+      ul.addEventListener("click", function (e) {
+        const a = e.target.closest("a");
+        if (!a) return;
+        // 최근 목록 링크면 저장 후 그대로 이동
+        if (a.dataset.recentLink === "1") {
+          saveRecent(a);
+        }
+      });
+    }
+
+    // =========================
+    // 초기 실행
+    // =========================
+    updateSectionCounts();
+    initAccordion();
+    loadRecent();
+    bindRecentClickDelegation();
+  </script>
+</body>
+</html>
