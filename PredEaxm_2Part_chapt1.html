@@ -11,6 +11,86 @@
   <title>예상문제 | 데이터에듀PT</title>
 
 <style>
+/* AUTO:exam-ui start */
+/* 클릭 가능 UX */
+a.b2.help,
+.cp1question1 .lst1 .li1,
+.cp1question1 .lst1 .li1 a {
+  cursor: pointer;
+}
+
+/* hover (navy) */
+.cp1question1 .lst1 .li1:hover {
+  background: rgba(31, 42, 68, 0.06);
+}
+
+/* 선택 표시 (navy) */
+.cp1question1 .lst1 .li1.is-selected {
+  background: rgba(31, 42, 68, 0.12);
+  border-radius: 6px;
+}
+
+.cp1question1 .lst1 .li1.is-selected .t1 {
+  font-weight: 600;
+  color: #2980b9; /* 딥 블루 */
+}
+
+/* 정답 (navy) */
+.cp1question1 .lst1 .li1.is-correct {
+  background: rgba(52, 152, 219, 0.18); /* 라이트 블루 */
+  border-radius: 6px;
+}
+
+.cp1question1 .lst1 .li1.is-correct .t1 {
+  font-weight: 700;
+  color: #2980b9; /* 딥 블루 */
+}
+
+/* 오답 */
+.cp1question1 .lst1 .li1.is-wrong {
+  background: rgba(160, 30, 30, 0.12);
+  border-radius: 6px;
+}
+
+.cp1question1 .lst1 .li1.is-wrong .t1 {
+  font-weight: 600;
+  color: #7a1f1f;
+}
+
+/* 보기 버튼 (navy) */
+a.b2.help {
+  color: #2980b9; /* 딥 블루 */
+}
+
+a.b2.help.on {
+  font-weight: 600;
+}
+/* AUTO:exam-ui end */
+
+
+(위 CSS 그대로 붙여 넣으세요)
+
+
+(위 CSS 그대로 붙여 넣으세요)
+
+
+/* AUTO:clickable-ui start */
+a.b2.help,
+.cp1question1 .lst1 .li1,
+.cp1question1 .lst1 .li1 a {
+  cursor: pointer;
+}
+
+.cp1question1 .lst1 .li1:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+a.b2.help:hover {
+  opacity: 0.85;
+}
+/* AUTO:clickable-ui end */
+
+
 /* AUTO:mobile-scroll-fix start */
 html {
   scroll-behavior: smooth;
@@ -3571,31 +3651,172 @@ document.querySelectorAll('a.b2.help').forEach(link => {
 
 
 
+(위 JS 그대로 붙여 넣으세요)
+
+
+
+
+
+
+(위 JS 그대로 붙여 넣으세요)
+
+
 <!-- AUTO:mobile-scroll-fix-js start -->
 <script>
-document.addEventListener('click', function (e) {
-  const link = e.target.closest('a.help');
-  if (!link) return;
+(function () {
 
-  const targetId = link.getAttribute('href');
-  if (!targetId || !targetId.startsWith('#')) return;
+  // ---------- utils ----------
+  function getPanelFromBtn(btn) {
+    const sel = btn.getAttribute('href');
+    if (!sel || !sel.startsWith('#')) return null;
+    return document.querySelector(sel);
+  }
 
-  const target = document.querySelector(targetId);
-  if (!target) return;
+  function isOpen(panel) {
+    return panel && getComputedStyle(panel).display !== 'none';
+  }
 
-  e.preventDefault();
+  function setOpen(btn, panel, open) {
+    if (!btn || !panel) return;
 
-  // 해설 열기
-  target.style.display = 'block';
+    if (open) {
+      panel.style.display = 'block';
+      btn.classList.add('on');
+      btn.setAttribute('aria-expanded', 'true');
 
-  // 모바일 대응: DOM 반영 후 스크롤
-  setTimeout(() => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      setTimeout(() => {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    } else {
+      panel.style.display = 'none';
+      btn.classList.remove('on');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  // ---------- storage ----------
+  function pageKeyPrefix() {
+    return 'exam:' + (location.pathname || 'page') + ':';
+  }
+
+  function getQuestionId(qBox) {
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    if (!btn) return null;
+    const href = btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return null;
+    return href.slice(1);
+  }
+
+  function storageKey(qId) {
+    return pageKeyPrefix() + qId;
+  }
+
+  // 정답 번호: 해설 패널 내 i.t2n (예: 2)
+  function getCorrectIndex(panel) {
+    const n = panel ? panel.querySelector('i.t2n') : null;
+    if (!n) return null;
+    const v = parseInt((n.textContent || '').trim(), 10);
+    return Number.isFinite(v) ? v : null; // 1-based
+  }
+
+  function clearState(qBox) {
+    qBox.querySelectorAll('.lst1 .li1').forEach(li => {
+      li.classList.remove('is-selected', 'is-correct', 'is-wrong');
     });
-  }, 50);
-});
+  }
+
+  function applyResult(qBox, idx) {
+    const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
+    const selected = options[idx - 1];
+    if (!selected) return;
+
+    selected.classList.add('is-selected');
+
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    const panel = btn ? getPanelFromBtn(btn) : null;
+    const correct = getCorrectIndex(panel);
+    if (!correct) return;
+
+    if (idx === correct) {
+      selected.classList.add('is-correct');
+    } else {
+      selected.classList.add('is-wrong');
+      const right = options[correct - 1];
+      if (right) right.classList.add('is-correct');
+    }
+  }
+
+  function saveChoice(qBox, idx) {
+    const qId = getQuestionId(qBox);
+    if (!qId) return;
+    try {
+      localStorage.setItem(storageKey(qId), String(idx));
+    } catch (e) {}
+  }
+
+  function restoreChoices() {
+    document.querySelectorAll('.cp1question1').forEach(qBox => {
+      const qId = getQuestionId(qBox);
+      if (!qId) return;
+
+      let v = null;
+      try {
+        v = localStorage.getItem(storageKey(qId));
+      } catch (e) {}
+
+      const idx = v ? parseInt(v, 10) : null;
+      if (!idx || !Number.isFinite(idx)) return;
+
+      clearState(qBox);
+      applyResult(qBox, idx);
+    });
+  }
+
+  // ---------- 1) 보기 버튼 토글 (충돌 방지) ----------
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('a.b2.help');
+    if (!btn) return;
+
+    const panel = getPanelFromBtn(btn);
+    if (!panel) return;
+
+    // 기존 스크립트(여러 개 존재)와 충돌 방지
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    setOpen(btn, panel, !isOpen(panel));
+  }, true);
+
+  // ---------- 2) 선지 클릭: 선택 표시 + 정답표시 + 저장 + 해설 오픈 ----------
+  document.addEventListener('click', function (e) {
+    const li = e.target.closest('.cp1question1 .lst1 .li1');
+    if (!li) return;
+
+    const qBox = li.closest('.cp1question1');
+    if (!qBox) return;
+
+    const options = Array.from(qBox.querySelectorAll('.lst1 .li1'));
+    const idx = options.indexOf(li) + 1;
+    if (!idx) return;
+
+    clearState(qBox);
+    applyResult(qBox, idx);
+    saveChoice(qBox, idx);
+
+    // 해설 자동 오픈
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    const panel = btn ? getPanelFromBtn(btn) : null;
+    if (btn && panel) setOpen(btn, panel, true);
+  }, true);
+
+  // ---------- init ----------
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', restoreChoices);
+  } else {
+    restoreChoices();
+  }
+
+})();
 </script>
 <!-- AUTO:mobile-scroll-fix-js end -->
 
