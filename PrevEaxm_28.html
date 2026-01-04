@@ -1,7 +1,7 @@
 <html lang="ko" style="" class="cssscrollbar Desktop PC zoom object-fit gteIE9orSUA Chrome width-large lt-width-xlarge"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>예상문제 | 데이터에듀PT</title>
+  <title>예상문제 </title>
 <style>
 /* AUTO:exam-ui start */
 /* 클릭 가능 UX */
@@ -49,8 +49,8 @@ a.b2.help.on {
   font-weight: 600;
 }
 /* AUTO:exam-ui end */
-(위 CSS 그대로 붙여 넣으세요)
-(위 CSS 그대로 붙여 넣으세요)
+
+
 /* AUTO:clickable-ui start */
 a.b2.help,
 .cp1question1 .lst1 .li1,
@@ -6008,21 +6008,201 @@ D3.js의 일반적인 절차는 데이터를 획득하고, 파싱하여 분석 �
 <!-- /cp1question1 -->
 
 
+
+
+
 <script>
-window.controlAllAnswers = function(show) {
-    // 1. 모든 해설 박스(tg2) 제어
-    const panels = document.querySelectorAll('.tg2');
-    panels.forEach(panel => {
-        panel.style.display = show ? 'block' : 'none';
-        if (show) panel.classList.add('loaded'); // 기존 테마 연동용
+/* === AUTO-PATCH: answer-toggle-v2 === */
+(function () {
+  function qsa(sel, root) { return Array.from((root || document).querySelectorAll(sel)); }
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+
+  function getPanelFromBtn(btn) {
+    const href = btn && btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return null;
+    return document.querySelector(href);
+  }
+
+  function setHelpLabel(btn, open) {
+    const t = btn ? btn.querySelector('.t1') : null;
+    if (t) t.textContent = open ? '정답닫기' : '정답보기';
+    if (btn) btn.setAttribute('aria-expanded', String(open));
+  }
+
+  function panelIsOpen(panel) {
+    if (!panel) return false;
+    if (panel.style.display) return panel.style.display !== 'none';
+    return getComputedStyle(panel).display !== 'none';
+  }
+
+  function openPanel(btn, panel) {
+    if (!panel) return;
+    panel.style.display = 'block';
+    panel.classList.add('loaded');     // 기존 테마 연동
+    setHelpLabel(btn, true);
+  }
+
+  function closePanel(btn, panel) {
+    if (!panel) return;
+    panel.style.display = 'none';
+    setHelpLabel(btn, false);
+  }
+
+  // ✅ 전체 정답 보기/닫기
+  window.controlAllAnswers = function (show) {
+    qsa('.tg2').forEach(panel => {
+      panel.style.display = show ? 'block' : 'none';
+      if (show) panel.classList.add('loaded');
+    });
+    qsa('a.b2.help').forEach(btn => setHelpLabel(btn, show));
+  };
+
+  // ✅ 개별 정답보기 토글 (이게 없으면 "클릭해도 아무 동작 없음")
+  function onHelpClick(e) {
+    const btn = e.target.closest('a.b2.help[href^="#"]');
+    if (!btn) return;
+    e.preventDefault();
+
+    const panel = getPanelFromBtn(btn);
+    if (!panel) return;
+
+    panelIsOpen(panel) ? closePanel(btn, panel) : openPanel(btn, panel);
+  }
+
+  // ✅ 보기 클릭 → 정오답 판정 + s1/s2 적용 + 자동 정답보기
+  function onOptionPick(e) {
+    const li = e.target.closest('.cp1question1 .lst1 .li1');
+    if (!li) return;
+
+    const qBox = li.closest('.cp1question1');
+    if (!qBox) return;
+
+    const btn = qs('a.b2.help[href^="#"]', qBox);
+    const panel = getPanelFromBtn(btn);
+
+    // 정답 번호(i.t2n)는 해설 패널 안에 있음(1-based)
+    const n = panel ? panel.querySelector('i.t2n') : null;
+    const correctIdx = n ? parseInt((n.textContent || '').trim(), 10) : NaN;
+
+    const options = qsa('.lst1 .li1', qBox);
+    const idx = options.indexOf(li) + 1; // 1-based
+
+    if (!Number.isFinite(correctIdx) || correctIdx <= 0) return;
+
+    const isCorrect = idx === correctIdx;
+    qBox.setAttribute('data-answer-state', isCorrect ? 'correct' : 'wrong');
+
+    // 헤더 표시 (정답 s1 | 오답 s2)
+    const b = qs('.w1 b', qBox);
+    if (b) b.className = isCorrect ? 's1' : 's2';
+
+    // 보기에도 클래스 부여(원하면 CSS로 강조)
+    options.forEach((opt, i) => {
+      opt.classList.remove('is-correct', 'is-wrong');
+      if (i + 1 === correctIdx) opt.classList.add('is-correct');
+    });
+    li.classList.add(isCorrect ? 'is-correct' : 'is-wrong');
+
+    // 자동 정답보기
+    openPanel(btn, panel);
+  }
+
+  // capture로 등록: 다른 스크립트가 click을 막아도 최대한 동작
+  document.addEventListener('click', onHelpClick, true);
+  document.addEventListener('click', onOptionPick, true);
+})();
+</script>
+
+<!-- AUTO:score-counter start -->
+<script>
+(function () {
+  function qsa(sel, root) { return Array.from((root || document).querySelectorAll(sel)); }
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+
+  function setText(el, n) {
+    if (!el) return;
+    el.textContent = String(n) + '개';
+  }
+
+  function updateTotal(total) {
+    const block = qs('.cp1dlist2');
+    if (!block) return;
+    qsa('.cp1dlist2 .di1', block).forEach(li => {
+      const label = (qs('.dt1', li)?.textContent || '').trim();
+      if (label === '총 문제') {
+        const dd = qs('.dd1', li);
+        if (dd) dd.textContent = String(total) + '개';
+      }
+    });
+  }
+
+  function getPanelFromQ(qBox) {
+    const btn = qBox.querySelector('a.b2.help[href^="#"]');
+    if (!btn) return null;
+    const href = btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return null;
+    return document.querySelector(href);
+  }
+
+  function getCorrectIndex(panel) {
+    const n = panel ? panel.querySelector('i.t2n') : null;
+    if (!n) return null;
+    const v = parseInt((n.textContent || '').trim(), 10);
+    return Number.isFinite(v) ? v : null; // 1-based
+  }
+
+  function recompute() {
+    const total = qsa('.cp1question1').length;
+    let correct = 0;
+    let wrong = 0;
+
+    qsa('.cp1question1').forEach(qBox => {
+      const state = qBox.getAttribute('data-answer-state');
+      if (state === 'correct') correct += 1;
+      else if (state === 'wrong') wrong += 1;
     });
 
-    // 2. 모든 개별 정답보기 버튼 텍스트 변경
-    const labels = document.querySelectorAll('.b2.help .t1');
-    labels.forEach(label => {
-        label.innerText = show ? '정답닫기' : '정답보기';
-    });
-};
+    const unanswered = Math.max(0, total - (correct + wrong));
+
+    updateTotal(total);
+    setText(qs('.cp1dlist2 .em1'), correct);
+    setText(qs('.cp1dlist2 .em2'), wrong);
+    setText(qs('.cp1dlist2 .em3'), unanswered);
+  }
+
+  function handle(e) {
+    const li = e.target.closest('.cp1question1 .lst1 .li1');
+    if (!li) return;
+
+    const qBox = li.closest('.cp1question1');
+    if (!qBox) return;
+
+    const options = qsa('.lst1 .li1', qBox);
+    const idx = options.indexOf(li) + 1; // 1-based
+    if (idx <= 0) return;
+
+    const panel = getPanelFromQ(qBox);
+    const correctIdx = getCorrectIndex(panel);
+    if (!correctIdx) {
+      qBox.removeAttribute('data-answer-state');
+      recompute();
+      return;
+    }
+
+    qBox.setAttribute('data-answer-state', (idx === correctIdx) ? 'correct' : 'wrong');
+    recompute();
+  }
+
+  // click이 막혀도 동작하도록 pointerup도 함께 수신(충돌 방어)
+  document.addEventListener('click', handle, true);
+  document.addEventListener('pointerup', handle, true);
+
+  function init() { recompute(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
 </script>
+<!-- AUTO:score-counter end -->
+
 </body>
 </html>
