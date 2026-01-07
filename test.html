@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Size Control (No jQuery)</title>
+  <style>
+    :root {
+      --base-font-size: 16px; /* default size */
+    }
+
+    body {
+      font-size: var(--base-font-size);
+      line-height: 1.6;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin: 2rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f7f7f7;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Optional: scale only a specific container instead of the whole page */
+    .content {
+      /* font-size: inherit;  // inherits from body */
+    }
+  </style>
+</head>
+<body>
+  <div class="controls" aria-label="글자 크기 조절">
+    <button id="decreaseBtn" type="button" aria-label="글자 크기 줄이기">A−</button>
+    <button id="increaseBtn" type="button" aria-label="글자 크기 늘리기">A+</button>
+    <button id="resetBtn" type="button" aria-label="기본 크기로 초기화">Reset</button>
+  </div>
+
+  <div class="content">
+    <h1>글자 크기 조절 데모</h1>
+    <p>
+      이 문단의 글자 크기를 버튼으로 조절할 수 있습니다. jQuery 없이 순수 JavaScript로 구현했습니다.
+    </p>
+    <p>
+      접근성을 위해 버튼에 <code>aria-label</code>을 추가하고, 최소/최대 크기를 제한합니다.
+    </p>
+  </div>
+
+  <script>
+    // Config
+    const MIN_SIZE = 12;  // px
+    const MAX_SIZE = 24;  // px
+    const STEP = 2;       // px
+    const DEFAULT_SIZE = 16; // px
+
+    const root = document.documentElement;
+    const decreaseBtn = document.getElementById('decreaseBtn');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Helper: get current font size from CSS variable
+    function getCurrentSize() {
+      const value = getComputedStyle(root).getPropertyValue('--base-font-size').trim();
+      return parseFloat(value.replace('px', '')) || DEFAULT_SIZE;
+    }
+
+    function setSize(px) {
+      const clamped = Math.max(MIN_SIZE, Math.min(MAX_SIZE, px));
+      root.style.setProperty('--base-font-size', clamped + 'px');
+      updateButtons(clamped);
+    }
+
+    function updateButtons(current) {
+      decreaseBtn.disabled = current <= MIN_SIZE;
+      increaseBtn.disabled = current >= MAX_SIZE;
+    }
+
+    // Event handlers
+    decreaseBtn.addEventListener('click', () => setSize(getCurrentSize() - STEP));
+    increaseBtn.addEventListener('click', () => setSize(getCurrentSize() + STEP));
+    resetBtn.addEventListener('click', () => setSize(DEFAULT_SIZE));
+
+    // Initialize
+    setSize(DEFAULT_SIZE);
+
+    // Optional: keyboard shortcuts (+ / -)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '+') setSize(getCurrentSize() + STEP);
+      if (e.key === '-') setSize(getCurrentSize() - STEP);
+    });
+  </script>
+</body>
+</html>
