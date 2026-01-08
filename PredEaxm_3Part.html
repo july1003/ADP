@@ -2,159 +2,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>예상문제 </title>
-<style>
-/* AUTO:exam-ui start */
-/* 클릭 가능 UX */
-a.b2.help,
-.cp1question1 .lst1 .li1,
-.cp1question1 .lst1 .li1 a {
-  cursor: pointer;
-}
-/* hover (navy) */
-.cp1question1 .lst1 .li1:hover {
-  background: rgba(31, 42, 68, 0.06);
-}
-/* 선택 표시 (navy) */
-.cp1question1 .lst1 .li1.is-selected {
-  background: rgba(31, 42, 68, 0.12);
-  border-radius: 6px;
-}
-.cp1question1 .lst1 .li1.is-selected .t1 {
-  font-weight: 600;
-  color: #2980b9; /* 딥 블루 */
-}
-/* 정답 (navy) */
-.cp1question1 .lst1 .li1.is-correct {
-  background: rgba(52, 152, 219, 0.18); /* 라이트 블루 */
-  border-radius: 6px;
-}
-.cp1question1 .lst1 .li1.is-correct .t1 {
-  font-weight: 700;
-  color: #2980b9; /* 딥 블루 */
-}
-/* 오답 */
-.cp1question1 .lst1 .li1.is-wrong {
-  background: rgba(160, 30, 30, 0.12);
-  border-radius: 6px;
-}
-.cp1question1 .lst1 .li1.is-wrong .t1 {
-  font-weight: 600;
-  color: #7a1f1f;
-}
-/* 보기 버튼 (navy) */
-a.b2.help {
-  color: #2980b9; /* 딥 블루 */
-}
-a.b2.help.on {
-  font-weight: 600;
-}
-/* AUTO:exam-ui end */
-.li1 {padding:4px 0px; line-height:1.2;font-size:16px}
-
-
-/* AUTO:clickable-ui start */
-a.b2.help,
-.cp1question1 .lst1 .li1,
-.cp1question1 .lst1 .li1 a {
-  cursor: pointer;
-}
-.cp1question1 .lst1 .li1:hover {
-  background: rgba(0, 0, 0, 0.04);
-}
-a.b2.help:hover {
-  opacity: 0.85;
-}
-/* AUTO:clickable-ui end */
-/* AUTO:mobile-scroll-fix start */
-html {
-  scroll-behavior: smooth;
-}
-.container {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-}
-/* AUTO:mobile-scroll-fix end */
-body {width:100%;}
-	.eg1 {padding:10px 0px; text-align:center;width:100%;}
-	.tg2 {border-bottom:1px solid #ddd;padding:5% 5%;display:none}
-	.cp1question1 {padding-bottom:12px;}
-	img {
-	  width: 100%;
-	  height: 100%;
-	  object-fit: contain; /* 또는 cover */
+	<style>
+	/* AUTO:exam-ui start */
+	/* 클릭 가능 UX */
+	a.b2.help,
+	.cp1question1 .lst1 .li1,
+	.cp1question1 .lst1 .li1 a {
+		cursor: pointer;
 	}
-h2 a {
-  font-size: 16px;        /* 글씨 크기 */
-  text-decoration: none;  /* 밑줄 제거 */
-  color: #333;            /* 기본 글자 색 */
-  font-weight: 500;       /* 약간 두껍게 */
-  transition: color 0.3s ease; /* hover 시 부드럽게 색 변화 */
-}
-h2 a:hover {
-  color: #007acc;         /* hover 시 포인트 색 */
-}
+	/* hover (navy) */
+	.cp1question1 .lst1 .li1:hover {
+		background: rgba(31, 42, 68, 0.06);
+	}
+	/* 선택 표시 (navy) */
+	.cp1question1 .lst1 .li1.is-selected {
+		background: rgba(31, 42, 68, 0.12);
+		border-radius: 6px;
+	}
+	.cp1question1 .lst1 .li1.is-selected .t1 {
+		font-weight: 600;
+		color: #2980b9; /* 딥 블루 */
+	}
+	/* 정답 (navy) */
+	.cp1question1 .lst1 .li1.is-correct {
+		background: rgba(52, 152, 219, 0.18); /* 라이트 블루 */
+		border-radius: 6px;
+	}
+	.cp1question1 .lst1 .li1.is-correct .t1 {
+		font-weight: 700;
+		color: #2980b9; /* 딥 블루 */
+	}
+	/* 오답 */
+	.cp1question1 .lst1 .li1.is-wrong {
+		background: rgba(160, 30, 30, 0.12);
+		border-radius: 6px;
+	}
+	.cp1question1 .lst1 .li1.is-wrong .t1 {
+		font-weight: 600;
+		color: #7a1f1f;
+	}
+	/* 보기 버튼 (navy) */
+	a.b2.help {
+		color: #2980b9; /* 딥 블루 */
+	}
+	a.b2.help.on {
+		font-weight: 600;
+	}
+	/* AUTO:exam-ui end */
+	.li1 {padding:4px 0px; line-height:1.2;font-size:16px}
 
-/* AUTO:cp1dlist2-style start */
-.cp1dlist2 {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #f0f0f0;
-  border-radius: 12px;
-  padding: 10px 15px;
-}
 
-.cp1dlist2 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-}
+	/* AUTO:clickable-ui start */
+	a.b2.help,
+	.cp1question1 .lst1 .li1,
+	.cp1question1 .lst1 .li1 a {
+		cursor: pointer;
+	}
+	.cp1question1 .lst1 .li1:hover {
+		background: rgba(0, 0, 0, 0.04);
+	}
+	a.b2.help:hover {
+		opacity: 0.85;
+	}
+	/* AUTO:clickable-ui end */
+	/* AUTO:mobile-scroll-fix start */
+	html {
+		scroll-behavior: smooth;
+	}
+	.container {
+		max-width: 600px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	/* AUTO:mobile-scroll-fix end */
+	body {width:100%;}
+		.eg1 {padding:10px 0px; text-align:center;width:100%;}
+		.tg2 {border-bottom:1px solid #ddd;padding:5% 5%;display:none}
+		.cp1question1 {padding-bottom:12px;}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain; /* 또는 cover */
+		}
+	h2 a {
+		font-size: 16px;        /* 글씨 크기 */
+		text-decoration: none;  /* 밑줄 제거 */
+		color: #333;            /* 기본 글자 색 */
+		font-weight: 500;       /* 약간 두껍게 */
+		transition: color 0.3s ease; /* hover 시 부드럽게 색 변화 */
+	}
+	h2 a:hover {
+		color: #007acc;         /* hover 시 포인트 색 */
+	}
 
-.em2 {
-  color: #d63031;
-}
-/* AUTO:cp1dlist2-style end */
-</style>
-    <style>
-    :root {
-      --base-font-size: 16px; /* default size */
-    }
+	/* AUTO:cp1dlist2-style start */
+	.cp1dlist2 {
+		display: flex;
+		justify-content: flex-end;
+		background-color: #f0f0f0;
+		border-radius: 12px;
+		padding: 10px 15px;
+	}
 
-    body {
-      font-size: var(--base-font-size);
-      line-height: 1.6;
-      /* font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; */
-      margin: 2rem;
-    }
+	.cp1dlist2 ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 10px;
+	}
 
-    .controls {
-      display: inline-block;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
+	.em2 {
+		color: #d63031;
+	}
+	/* AUTO:cp1dlist2-style end */
+	</style>
+			<style>
+			:root {
+				--base-font-size: 16px; /* default size */
+			}
 
-    button {
-      padding: 0.5rem 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background: #f7f7f7;
-      cursor: pointer;
-	  vertical-align: middle;
-	  line-height: normal;
-    }
+			body {
+				font-size: var(--base-font-size);
+				line-height: 1.6;
+				/* font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; */
+				margin: 2rem;
+			}
 
-    button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
+			.controls {
+				display: inline-block;
+				gap: 0.5rem;
+				margin-bottom: 1rem;
+			}
 
-    /* Optional: scale only a specific container instead of the whole page */
-    .content {
-      /* font-size: inherit;  // inherits from body */
-    }
-  </style>
+			button {
+				padding: 0.5rem 0.75rem;
+				border: 1px solid #ccc;
+				border-radius: 6px;
+				background: #f7f7f7;
+				cursor: pointer;
+			vertical-align: middle;
+			line-height: normal;
+			}
+
+			button:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+
+			/* Optional: scale only a specific container instead of the whole page */
+			.content {
+				/* font-size: inherit;  // inherits from body */
+			}
+		</style>
   <script>
     // Config
     const MIN_SIZE = 12;  // px
@@ -207,18 +207,25 @@ h2 a:hover {
 <!-- #forPrint -->
 <div id="forPrint">
 <!-- _content -->
-<div id="body_content">
-<h2 style="display:flex; align-items:center; display:flex; gap:5px;">
-	<a href="index.html"><button type="button">&lt; 돌아가기</button></a>
-	<span class="all-controls" style="margin-left: 15px; vertical-align: middle;">
-		<button type="button" onclick="window.controlAllAnswers(true)" style="padding: 6px 12px; background-color: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">전체 정답 보기</button>
-		<button type="button" onclick="window.controlAllAnswers(false)" style="padding: 6px 12px; background-color: #95a5a6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; margin-left: 5px;">전체 가리기</button>
-	</span>
-	<span class="controls" aria-label="글자 크기 조절" style="display:flex; gap:5px;">
-		<button id="decreaseBtn" type="button" aria-label="글자 크기 줄이기">A−</button>
-		<button id="increaseBtn" type="button" aria-label="글자 크기 늘리기">A+</button>
-		<button id="resetBtn" type="button" aria-label="기본 크기로 초기화">Reset</button>
-	</span>	
+<h2 style="display:flex; align-items:center; gap:10px;">
+  <a href="index.html">
+    <button type="button">← 돌아가기</button>
+  </a>
+
+  <span class="all-controls" style="margin-left: 15px; display:flex; gap:5px;">
+    <button type="button" class="primary" onclick="window.controlAllAnswers(true)">
+      전체 정답 보기
+    </button>
+    <button type="button" class="secondary" onclick="window.controlAllAnswers(false)">
+      전체 가리기
+    </button>
+  </span>
+
+  <span class="controls" aria-label="글자 크기 조절" style="display:flex; gap:5px;">
+    <button id="decreaseBtn" type="button" aria-label="글자 크기 줄이기">A−</button>
+    <button id="increaseBtn" type="button" aria-label="글자 크기 늘리기">A+</button>
+    <button id="resetBtn" type="button" aria-label="기본 크기로 초기화">Reset</button>
+  </span>
 </h2>
 <!-- container -->
 <div class="container clearfix">
@@ -2898,7 +2905,7 @@ Servitization은 제품과 서비스의 결합을 통해 새로운 비즈니스 
 </div>
 </div>
 <!-- /cp1question1 -->
-
+<a href="index.html"> &lt; 돌아가기</a>
 
 
 
