@@ -5012,5 +5012,30 @@ Durbin-Watson 통계량은 잔차의 자기 상관을 확인하는 데 사용되
 </script>
 <!-- AUTO:score-counter end -->
 
+
+  <style>
+    /* 스크롤 시 적용될 스타일 */
+    .cp1dlist2.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    const header = document.querySelector('.cp1dlist2');
+    const headerOffset = header.offsetTop;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > headerOffset) {
+        header.classList.add('fixed');
+      } else {
+        header.classList.remove('fixed');
+      }
+    });
+  </script>
+
 </body>
 </html>
